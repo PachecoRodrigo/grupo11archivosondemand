@@ -1,0 +1,88 @@
+body{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+.main-section-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+.login-section{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+
+    min-width:40% ;
+
+    border-radius: 10px;
+
+}
+
+.login-title{
+    width: 450px;
+}
+
+.login-title h1{
+    margin-right: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.input-fields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-decoration{
+    height: 30px;
+    width: 90%;
+    border: 1px solid grey ;
+    border-radius: 3px;
+    margin-bottom: 1px;
+}
+
+.submit-button{
+    margin-top: 10px;
+    width: 92%;
+    height: 30px;
+    background-color:#ffd600;
+    border: none;
+    color:black;
+
+}
+
+
+
+
+
+
+@media (max-width: 500px){
+    .login-section{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    
+    }
+
+    .login-section h1{
+        margin-right: 0px;
+    }
+
+    .input-fields{
+        width: 100%;
+    }
+}
