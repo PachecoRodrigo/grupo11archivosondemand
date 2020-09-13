@@ -3,7 +3,7 @@
 
 }
 
-.main-section-login{
+.main-section-register{
     display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -11,7 +11,7 @@
 
 
 
-.login-section{
+.register-section{
     background-color: black;
     display: flex;
     justify-content: center;
@@ -25,11 +25,11 @@
 
 }
 
-.login-title{
+.register-title{
     width: 450px;
 }
 
-.login-title h1{
+.register-title h1{
     margin-right: 25px;
     text-align: center;
     font-size: 25px;
@@ -72,7 +72,7 @@
 
 
 @media (max-width: 500px){
-    .login-section{
+    .register-section{
 
         flex-direction: column;
         justify-content: center;
@@ -81,11 +81,11 @@
     
     }
 
-    .login-section h1{
+    .register-section h1{
         margin-right: 0px;
     }
 
-    .input-fields{
+    .register-fields{
         width: 100%;
     }
 }
