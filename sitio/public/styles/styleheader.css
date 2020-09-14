@@ -27,6 +27,31 @@ h1.lema{
     margin-bottom: 10px;
 }
 
+.main-footer{
+    background-color: #f3f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    
+}
+ul.redes-ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style-type: none;
+}
+a.redes-link{
+margin: 10px;
+}
+div.botones__footer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+a.boton-footer{
+color: gray;
+}
+
+
 @media(max-width:640px){
     h1.lema{
         font-size: medium;
