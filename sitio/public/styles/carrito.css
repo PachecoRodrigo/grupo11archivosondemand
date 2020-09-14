@@ -29,10 +29,12 @@
 .product_title{
     width: 40%;
     padding-left: 50px;
+    font-size: 30px;
 
 }
 
 .product_price{
+    margin-top: 4px;
     width: 40%;
     display: flex;
     flex-wrap: wrap;
@@ -55,11 +57,23 @@
 }
 
 .total_div{
-    width: 80%;
-    background-color: blue;
-    text-align: right;
-}
+    width: 70%;
+    font-size: 40px;
+    text-align: center;
 
+}
+.buy_button{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 30px;
+
+    background-color:#ffd600;
+    border: none;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
 
 @media (max-width: 582px){
 
@@ -68,6 +82,7 @@
     }
 
     .product_title{ 
+        width: 90%;
         padding-left: 0px;
         text-align: center;
     }
