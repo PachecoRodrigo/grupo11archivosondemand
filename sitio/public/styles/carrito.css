@@ -1,0 +1,85 @@
+*{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+.carrito-section{
+    margin-top: 30px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_item{
+
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border: 1px solid black;
+
+}
+
+.product_title{
+    width: 40%;
+    padding-left: 50px;
+
+}
+
+.product_price{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product_price input{
+    height: 25px;
+    width: 30px
+}
+
+
+.product_img img{
+    width: 100%;
+}
+
+.product_img{
+    width: 20%;
+}
+
+.total_div{
+    width: 80%;
+    background-color: blue;
+    text-align: right;
+}
+
+
+@media (max-width: 582px){
+
+    .cart_item{
+        flex-direction: column;
+    }
+
+    .product_title{ 
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .product_price{
+    flex-direction: column;
+    justify-content: unset;
+    text-align: center;
+    width: 100%;
+    }
+    .product_price input{
+        height: 20px;
+        width: 20px
+    }
+}

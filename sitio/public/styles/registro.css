@@ -12,7 +12,6 @@
 
 
 .register-section{
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +21,7 @@
     min-width:40% ;
 
     border-radius: 10px;
+    border: 1px solid black;
 
 }
 
@@ -33,7 +33,7 @@
     margin-right: 25px;
     text-align: center;
     font-size: 25px;
-    color: white;
+    color: black;
 }
 
 .input-fields{
