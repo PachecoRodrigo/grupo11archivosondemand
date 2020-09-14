@@ -31,4 +31,7 @@ h1.lema{
     h1.lema{
         font-size: medium;
     }
+    .logo{
+        width: 100px;
+    }
 }
