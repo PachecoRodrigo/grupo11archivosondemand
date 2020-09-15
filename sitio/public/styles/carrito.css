@@ -69,19 +69,25 @@ body{
     text-align: center;
 
 }
-.buy_button{
-    margin-top: 10px;
+.buy-button{
+    margin-top: 20px;
     margin-bottom: 30px;
-    height: 40px;
-    font-size: 30px;
-
-    background-color:#ffd600;
-    border: none;
-    color:black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
-}
+	background-color: #ffd600;
+	border-radius: 10em;
+	border: none;
+	padding: 20px 40px;
+	font-size: 18pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+    .buy-button:hover {
+	background-color:#ffd600;
+	box-shadow: 0px 15px 20px rgba(121, 121, 121, 0.4);
+	color:black;
+	transform: translateX(-7px);
+  }
 
 .main-footer{
 
