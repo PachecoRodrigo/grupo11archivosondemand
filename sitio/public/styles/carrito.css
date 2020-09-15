@@ -3,6 +3,13 @@
 
 }
 
+body{ 
+    height:100vh; margin:0;
+    display:flex; 
+    flex-direction:column; 
+
+}
+
 .carrito-section{
     margin-top: 30px;;
     display: flex;
@@ -64,6 +71,7 @@
 }
 .buy_button{
     margin-top: 10px;
+    margin-bottom: 30px;
     height: 40px;
     font-size: 30px;
 
@@ -73,6 +81,11 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 3px;
+}
+
+.main-footer{
+
+    margin-top:auto; 
 }
 
 @media (max-width: 582px){
