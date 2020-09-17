@@ -4,13 +4,6 @@
 
 }
 
-
-.main-section-login{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
 body{ 
     height:100vh; margin:0;
     display:flex; 
@@ -18,6 +11,11 @@ body{
 
 }
 
+.main-section-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
 
 .login-section{
@@ -28,23 +26,37 @@ body{
     padding: 30px;
 
     min-width:40% ;
-    background-color: white;
+    background-color:black;
 
     border-radius: 10px;
-    border: 1px solid black;
+
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
 }
 
 .login-title{
     width: 450px;
+    display: flex;
+    flex-direction: column;
 }
 
-.login-title h1{
-    margin-right: 25px;
+.login-picture{
+    text-align: center;
+}
+
+.login-picture img{
+    width: 50px;
+}
+
+.login-title p{
+    padding: 0px;
     text-align: center;
     font-size: 25px;
-    color:black;
+    color:white;
+    margin: 0px;
+    margin-bottom: 15px;
 }
+
 
 .input-fields{
     width: 100%;
@@ -65,23 +77,30 @@ body{
 .input-decoration{
     height: 37px;
     width: 90%;
-    border: 1px solid grey ;
-    border-radius: 3px;
-    margin-bottom: 1px;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .submit-button{
-    margin-top: 10px;
-    width: 92%;
-    height: 37px;
-    background-color:#ffd600;
-    border: none;
-    color:black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+    margin-top: 15px;
+	background-color: #ffd600;
+	border-radius: 10em;
+	border: none;
+	padding: 20px 40px;
+	font-size: 18pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	outline: none;
+	}
+    .submit-button:hover {
+	background-color:#ffd600;
+	box-shadow: 0px 15px 20px rgba(121, 121, 121, 0.4);
+	color:black;
+	transform: translateX(-7px);
+  }
 
-}
 
 .main-footer{
 
