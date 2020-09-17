@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>producto</title>
+    <title>Detalle | FOD</title>
     <link rel="stylesheet" href="\styles\styleheader.css">
+    <link rel="stylesheet" href="/styles/styledetalle.css">
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
-     <!-- header -->
-     <header class="main-header">
+    <!-- header -->
+    <header class="main-header">
         <a href="/" class="pagina__inicio">
             <img src="\img\logoFOD.png" alt="logo" class= "logo">
         </a>      
@@ -25,13 +24,58 @@
     </header>
     <!--fin del header -->
 
-    <!--ingresar codigo del cuerpo de la pagina aqui-->
+<!--inicio detalle del producto -->
+    <section class="body-description">
 
-    
-    este es el detalle del producto.
+        <section class="product-wrapper">
+            
+            <div class="product-title">
+                <h1>Producto nombre</h1>
+            </div>
+
+            <section class="product">
+
+                <article class="product-img">
+                    
+                    <!-- Trigger the Modal -->
+                    <img id="myImg" src="/img/productaudio.png" alt="Music">
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <!-- The Close Button -->
+                            <span class="close">&times;</span>
+                            <!-- Modal Content (The Image) -->
+                            <img class="modal-content" id="img01">
+                            <!-- Modal Caption (Image Text) -->
+                            <div id="caption"></div>
+                        </div>
 
 
-    <!--ingresar codigo del cuerpo de la pagina hasta aqui-->
+                    <audio controls volume="0.9"  class="audio-example">
+                        <source src="/media/audio.mp3" type="audio/mp3">
+                        You will see this text if native audio playback is not supported.
+                    </audio>
+                </article>
+
+                <article class="product-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, omnis reiciendis veniam dicta doloribus perferendis placeat harum ducimus dolorum eius optio iste, est hic quaerat quia possimus nisi quae nesciunt! </p>
+                    
+                    <div class="product-options">
+                    
+                        <div class="add-chart">
+                            <button class="button-chart"><a href="/carrito">Agregar</a></button>
+                        </div>
+                    
+                        <div class="product-price">
+                            <h2>$ 1365</h2>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </section>
+    <!--fin detalle del producto -->
+
       <!-- footer -->    
       <footer class="main-footer">
         <div class= "redes">
@@ -58,4 +102,5 @@
     </footer>
     <!-- fin del footer -->  
 </body>
+<script src="js/detalle.js"></script>
 </html>
