@@ -1,5 +1,10 @@
 module.exports = {
-    index: function(req, res, next) {
-        res.send('respond with a resource');
-      }
+    login: (req, res, next) => {
+      res.render('login');
+    },
+
+    register: (req, res, next) => {
+      res.render('register');
+    }
+    
 }

@@ -1,0 +1,151 @@
+*{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+body{ 
+    height:100vh; margin:0;
+    display:flex; 
+    flex-direction:column; 
+
+}
+
+.carrito-section{
+    margin-top: 30px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_item{
+    background-color: black;
+
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+}
+
+.product_title{
+    width: 40%;
+    padding-left: 50px;
+    font-size: 30px;
+    color: white;
+
+}
+
+.product_price{
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    
+    color: white;
+}
+
+.product_price input{
+    height: 25px;
+    width: 30px
+}
+
+
+.product_img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product_img{
+    width: 20%;
+}
+
+.total_div{
+    width: 70%;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.delete-button{
+    align-self: flex-end;
+	background-color: #ffd600;
+	border-radius: 10em;
+	border: none;
+	padding: 10px 20px;
+	font-size: 13pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+    outline: none;
+}
+
+.delete-button:hover {
+	background-color:#ffd600;
+	box-shadow: 0px 15px 20px rgba(121, 121, 121, 0.4);
+	color:black;
+	transform: translateX(-7px);
+  }
+
+
+.buy-button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+	background-color: #ffd600;
+	border-radius: 10em;
+	border: none;
+	padding: 20px 40px;
+	font-size: 18pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	}
+.buy-button:hover {
+	background-color:#ffd600;
+	box-shadow: 0px 15px 20px rgba(121, 121, 121, 0.4);
+	color:black;
+	transform: translateX(-7px);
+  }
+
+.main-footer{
+
+    margin-top:auto; 
+}
+
+@media (max-width: 700px){
+
+    .cart_item{
+        flex-direction: column;
+    }
+
+    .product_title{ 
+        width: 90%;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    .product_price{
+    flex-direction: column;
+    justify-content: unset;
+    text-align: center;
+    width: 100%;
+    }
+    .product_price input{
+        height: 20px;
+        width: 20px
+    }
+    
+    .delete-button{
+        margin-top: 15px;
+        align-self: center;
+    }
+}
