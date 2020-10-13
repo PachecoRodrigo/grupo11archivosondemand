@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOD COMUNITY</title>
+    <link rel="stylesheet" href="\styles\styleheader.css">
+    <link rel="stylesheet" href="\styles\styleindex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="main-header">
+            <a href="/" class="pagina__inicio">
+                <img src="\img\logoFOD.png" alt="logo" class= "logo">
+            </a>      
+            <h1 class="lema">Facilitamos el intercambio de arte digital</h1>      
+            <nav class="main-nav">
+                <a href="users/register" class= "link"><i class='fas fa-plus-circle'></i> CREAR CUENTA</a>
+                <a href="users/login" class= "link"><i class='fas fa-user-circle'></i> INICIAR SESIÓN</a>
+                <a href="/cart"class="link"><i class='fas fa-shopping-cart'></i></a>
+            </nav>
+        </header>
+        <!--fin del header -->
+    <section class="busquedas">
+        <form class="barras">        
+            <input type="search" placeholder="Busca canciones, sonidos o efectos">
+        </form>	
+        <form class="barras">
+            <input class="imagenes" type="search" placeholder="Busca imagenes, caricaturas o fotografias">
+        </form>	
+        <form class="barras">
+            <input class="escritura" type="search" placeholder="Busca libros, articulos o frases">
+        </form>	
+        <form class="barras">
+            <input class="disenio" type="search" placeholder="Busca 3D, planos o maquetas">
+        </form>	
+    </section>
+    <h3 class= destacados>Archivos Destacados</h3>
+    <section class= "productos__destacados">
+        <article class= "productos">
+            <a href="products/detail">
+            <img src="/img/produaudio.png" alt="audio" class= "produ__img">
+            <h4>Cancion Rock</h4>
+            <h5>$300</h5>
+            </a>
+        </article>
+        <article class= "productos">
+            <a href="products/detail">
+            <img src="/img/produimagen.png" alt="imagen" class= "produ__img">
+            <h4>Poster Sunset</h4>
+            <h5>$150</h5>
+            </a>
+        </article>
+        <article class= "productos">
+            <a href="products/detail">
+            <img src="/img/produlibro.png" alt="texto" class= "produ__img">
+            <h4>Libro Ballenas</h4>
+            <h5>$450</h5>
+            </a>
+        </article>
+        <article class= "productos">
+            <a href="products/detail">
+            <img src="/img/produdiseño.png" alt="diseño" class= "produ__img">
+            <h4>3D Star Wars</h4>
+            <h5>$120</h5>
+            </a>
+        </article>
+        </section>
+        <section class= "busca__categorias">
+            <a href="" class="carpetas__categorias">AUDIO
+            </a>
+            <a href="" class="carpetas__categorias">IMAGEN
+            </a>
+            <a href="" class="carpetas__categorias">ESCRITURA
+            </a>
+            <a href="" class="carpetas__categorias">DISEÑO
+            </a>
+        </section>
+        <section class="publicar__arch">
+        <h3 class= destacados>Donde el arte digital tiene valor</h3>
+        <button class="publicar">Publicar</button>  
+        </section>  
+        <!-- footer -->    
+        <footer class="main-footer">
+            <div class= "redes">
+                <ul class="redes-ul">
+                    <li>
+                    <a href=""class="redes-link"><img src="/img/faceicon.png" alt="facebook"></a>
+                    </li>
+                    <li>
+                    <a href=""class="redes-link"><img src="/img/instaicon.png" alt="instagram"></a>
+                    </li>
+                    <li>
+                    <a href=""class="redes-link"><img src="/img/twittericon.png" alt="twitter"></a>
+                    </li>
+                    <li>
+                    <a href=""class="redes-link"><img src="/img/youtubeicon.png" alt="youtube"></a>
+                    </li>
+                </ul>
+                <div class= "botones__footer">
+                <a href="" class="boton-footer">Contacto</a>
+                <a href="" class="boton-footer">Terminos y condiciones</a>
+                <a href="" class="boton-footer">FAQ</a>
+                </div>
+            </div>
+        </footer>
+        <!-- fin del footer -->  
+    </div>                
+    </body>
 </html>
