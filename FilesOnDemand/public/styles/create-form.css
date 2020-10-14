@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.create_product_section{
+    margin:auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100px;
+    background-color: black;
+
+
+    border-radius: 10px;
+
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    min-width: 70%;
+
+    padding:20px;
+
+    box-sizing: border-box;
+
+}
+
+.create_produc_title h2{
+    color: white;
+    margin:0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.grid_create_form{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input_box{
+    display: flex;
+    flex-direction:column; 
+
+    box-sizing: border-box;
+    
+}
+.label_decoration{
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.input_box input{
+    height: 37px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.input_box select{
+    height: 37px;
+    width: 100%;
+    /* border: none; */
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.description_box{
+    display: flex;
+    flex-direction:column; 
+    height: 80px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 20px;
+    
+}
+
+.description_box textarea{
+    border-radius: 5px;
+    border: none;
+    outline:0px none transparent;
+    font-size: 15px;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+
+.create_button{
+    text-align: center;
+}
+
+
+.submit-button{
+    transition: all 0.3s ease 0s;
+    margin-top: 15px;
+	background-color: #ffd600;
+	border-radius: 10em;
+	border: none;
+	padding: 20px 40px;
+	font-size: 18pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	outline: none;
+	}
+    .submit-button:hover {
+	background-color:#ffd600;
+	color:black;
+	transform: translateX(-7px);
+  }
+
+  @media (max-width: 800px){
+    .grid_create_form{
+        grid-template-columns: 1fr;
+    }
+
+    .create_product_section{
+        width: 90%;
+    }
+
+    .input_box input{
+        width: 100%;
+    }
+}
+
+
+
