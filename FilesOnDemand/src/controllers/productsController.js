@@ -4,5 +4,11 @@ module.exports = {
       },
     detail: (req,res)=>{
         res.render('detail');
+    },
+    create: (req,res)=>{
+        res.render('create-form');
+    },
+    edit: (req,res)=>{
+        res.render('edit-form');
     }
 }
