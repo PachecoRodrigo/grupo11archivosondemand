@@ -16,12 +16,16 @@ body{
 h1.lema{
     color: white;
 }
+
 .link{
     text-decoration: none;
     font-size: medium;
     color: white;
     padding: 10px;
+    
 }
+
+
 .main-nav{
     align-self: flex-end; 
     margin-bottom: 10px;
