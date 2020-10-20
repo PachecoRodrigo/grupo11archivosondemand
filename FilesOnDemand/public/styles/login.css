@@ -32,6 +32,9 @@ body{
 
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .login-title{
@@ -72,6 +75,7 @@ body{
     color: white;
     margin-top: 7px;
 
+
 }
 
 .input-decoration{
@@ -80,6 +84,7 @@ body{
     border: none;
     margin-bottom: 5px;
     border-radius: 5px;
+    outline: none;
 }
 
 .submit-button{

@@ -18,7 +18,7 @@ body{
 }
 
 .cart_item{
-    background-color: black;
+    background-color: white;
 
     width: 80%;
     border-radius: 10px;
@@ -38,7 +38,7 @@ body{
     width: 40%;
     padding-left: 50px;
     font-size: 30px;
-    color: white;
+    color: black;
 
 }
 
@@ -50,12 +50,17 @@ body{
     justify-content: space-around;
     align-items:center;
     
-    color: white;
+    color: black;
+
 }
 
-.product_price input{
-    height: 25px;
-    width: 30px
+.product_price select{
+    height: 30px;
+    width: 40px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+
 }
 
 
