@@ -98,18 +98,6 @@ body{
 	transform: translateX(-7px);
   }
 
-
-
-.main-footer{
-
-    margin-top:auto; 
-}
-
-
-
-
-
-
 @media (max-width: 500px){
     .register-section{
 
