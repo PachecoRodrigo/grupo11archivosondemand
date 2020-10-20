@@ -22,6 +22,10 @@ module.exports = {
         res.render('create-form');
     },
     edit: (req,res)=>{
-        res.render('edit-form');
+        let id = (req.params.idProduct);        
+        let oneproduct = products.filter(function(element){
+            return element.idProduct == id;
+        });
+        res.render('edit-form',{ oneproduct });
     }
 }

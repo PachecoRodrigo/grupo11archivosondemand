@@ -9,7 +9,7 @@
 		"image": "picture3.png",
 		"sound": "Kyle.mp3",
 		"document": "Miriam.pdf",
-		"3dDesign": "Powell.stl"
+		"design": "Powell.stl"
 	},
 	{
 		"idProduct": 101,
@@ -21,7 +21,7 @@
 		"image": "picture3.png",
 		"sound": "Henry.mp3",
 		"document": "Mariam.pdf",
-		"3dDesign": "Contreras.stl"
+		"design": "Contreras.stl"
 	},
 	{
 		"idProduct": 102,
@@ -33,7 +33,7 @@
 		"image": "picture1.jpg",
 		"sound": "Dante.mp3",
 		"document": "Hannah.pdf",
-		"3dDesign": "Underwood.stl"
+		"design": "Underwood.stl"
 	},
 	{
 		"idProduct": 103,
@@ -45,11 +45,11 @@
 		"image": "picture4.jpg",
 		"sound": "Carter.mp3",
 		"document": "Kerry.pdf",
-		"3dDesign": "Chapman.stl"
+		"design": "Chapman.stl"
 	},
 	{
 		"idProduct": 104,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "tortor. Nunc commodo",
 		"description": "lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et,",
 		"price": 5672,
@@ -57,7 +57,7 @@
 		"image": "picture4.jpg",
 		"sound": "Zeph.mp3",
 		"document": "Reagan.pdf",
-		"3dDesign": "Dorsey.stl"
+		"design": "Dorsey.stl"
 	},
 	{
 		"idProduct": 105,
@@ -69,11 +69,11 @@
 		"image": "picture3.png",
 		"sound": "Cameron.mp3",
 		"document": "Fatima.pdf",
-		"3dDesign": "Obrien.stl"
+		"design": "Obrien.stl"
 	},
 	{
 		"idProduct": 106,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "dui. Cum sociis",
 		"description": "elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede. Cras vulputate",
 		"price": 7717,
@@ -81,7 +81,7 @@
 		"image": "picture2.jpg",
 		"sound": "Marshall.mp3",
 		"document": "Morgan.pdf",
-		"3dDesign": "Bernard.stl"
+		"design": "Bernard.stl"
 	},
 	{
 		"idProduct": 107,
@@ -93,7 +93,7 @@
 		"image": "picture2.jpg",
 		"sound": "Upton.mp3",
 		"document": "Nomlanga.pdf",
-		"3dDesign": "Wilkerson.stl"
+		"design": "Wilkerson.stl"
 	},
 	{
 		"idProduct": 108,
@@ -105,11 +105,11 @@
 		"image": "picture3.png",
 		"sound": "Amery.mp3",
 		"document": "Shellie.pdf",
-		"3dDesign": "Parks.stl"
+		"design": "Parks.stl"
 	},
 	{
 		"idProduct": 109,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "nunc ac mattis",
 		"description": "hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci",
 		"price": 2882,
@@ -117,11 +117,11 @@
 		"image": "picture4.jpg",
 		"sound": "Barrett.mp3",
 		"document": "Florence.pdf",
-		"3dDesign": "Sanders.stl"
+		"design": "Sanders.stl"
 	},
 	{
 		"idProduct": 110,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "rhoncus. Proin nisl",
 		"description": "turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris",
 		"price": 3852,
@@ -129,7 +129,7 @@
 		"image": "picture3.png",
 		"sound": "Mannix.mp3",
 		"document": "Marcia.pdf",
-		"3dDesign": "Cooley.stl"
+		"design": "Cooley.stl"
 	},
 	{
 		"idProduct": 111,
@@ -141,7 +141,7 @@
 		"image": "picture4.jpg",
 		"sound": "Hammett.mp3",
 		"document": "Irma.pdf",
-		"3dDesign": "Shannon.stl"
+		"design": "Shannon.stl"
 	},
 	{
 		"idProduct": 112,
@@ -153,7 +153,7 @@
 		"image": "picture3.png",
 		"sound": "Keith.mp3",
 		"document": "Rae.pdf",
-		"3dDesign": "Hardin.stl"
+		"design": "Hardin.stl"
 	},
 	{
 		"idProduct": 113,
@@ -165,7 +165,7 @@
 		"image": "picture4.jpg",
 		"sound": "Cody.mp3",
 		"document": "Sybill.pdf",
-		"3dDesign": "Wallace.stl"
+		"design": "Wallace.stl"
 	},
 	{
 		"idProduct": 114,
@@ -177,7 +177,7 @@
 		"image": "picture4.jpg",
 		"sound": "Arsenio.mp3",
 		"document": "Daryl.pdf",
-		"3dDesign": "Foster.stl"
+		"design": "Foster.stl"
 	},
 	{
 		"idProduct": 115,
@@ -189,7 +189,7 @@
 		"image": "picture3.png",
 		"sound": "Benjamin.mp3",
 		"document": "Vielka.pdf",
-		"3dDesign": "Gaines.stl"
+		"design": "Gaines.stl"
 	},
 	{
 		"idProduct": 116,
@@ -201,7 +201,7 @@
 		"image": "picture4.jpg",
 		"sound": "Malik.mp3",
 		"document": "Wanda.pdf",
-		"3dDesign": "Trujillo.stl"
+		"design": "Trujillo.stl"
 	},
 	{
 		"idProduct": 117,
@@ -213,11 +213,11 @@
 		"image": "picture3.png",
 		"sound": "Steel.mp3",
 		"document": "Whitney.pdf",
-		"3dDesign": "Stafford.stl"
+		"design": "Stafford.stl"
 	},
 	{
 		"idProduct": 118,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "interdum libero dui",
 		"description": "lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed,",
 		"price": 6952,
@@ -225,7 +225,7 @@
 		"image": "picture2.jpg",
 		"sound": "Rogan.mp3",
 		"document": "Dana.pdf",
-		"3dDesign": "Berry.stl"
+		"design": "Berry.stl"
 	},
 	{
 		"idProduct": 119,
@@ -237,7 +237,7 @@
 		"image": "picture1.jpg",
 		"sound": "Zahir.mp3",
 		"document": "Christine.pdf",
-		"3dDesign": "Shannon.stl"
+		"design": "Shannon.stl"
 	},
 	{
 		"idProduct": 120,
@@ -249,7 +249,7 @@
 		"image": "picture2.jpg",
 		"sound": "Phelan.mp3",
 		"document": "Urielle.pdf",
-		"3dDesign": "Kaufman.stl"
+		"design": "Kaufman.stl"
 	},
 	{
 		"idProduct": 121,
@@ -261,7 +261,7 @@
 		"image": "picture2.jpg",
 		"sound": "Keegan.mp3",
 		"document": "Janna.pdf",
-		"3dDesign": "Hurley.stl"
+		"design": "Hurley.stl"
 	},
 	{
 		"idProduct": 122,
@@ -273,7 +273,7 @@
 		"image": "picture4.jpg",
 		"sound": "Macaulay.mp3",
 		"document": "Flavia.pdf",
-		"3dDesign": "Brewer.stl"
+		"design": "Brewer.stl"
 	},
 	{
 		"idProduct": 123,
@@ -285,7 +285,7 @@
 		"image": "picture1.jpg",
 		"sound": "Marshall.mp3",
 		"document": "Jenna.pdf",
-		"3dDesign": "Solomon.stl"
+		"design": "Solomon.stl"
 	},
 	{
 		"idProduct": 124,
@@ -297,7 +297,7 @@
 		"image": "picture3.png",
 		"sound": "Travis.mp3",
 		"document": "Maia.pdf",
-		"3dDesign": "Villarreal.stl"
+		"design": "Villarreal.stl"
 	},
 	{
 		"idProduct": 125,
@@ -309,7 +309,7 @@
 		"image": "picture4.jpg",
 		"sound": "Christopher.mp3",
 		"document": "Martena.pdf",
-		"3dDesign": "Johnston.stl"
+		"design": "Johnston.stl"
 	},
 	{
 		"idProduct": 126,
@@ -321,11 +321,11 @@
 		"image": "picture2.jpg",
 		"sound": "Carter.mp3",
 		"document": "Gretchen.pdf",
-		"3dDesign": "Knox.stl"
+		"design": "Knox.stl"
 	},
 	{
 		"idProduct": 127,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "aliquet, sem ut",
 		"description": "vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis",
 		"price": 5088,
@@ -333,7 +333,7 @@
 		"image": "picture4.jpg",
 		"sound": "Melvin.mp3",
 		"document": "Dai.pdf",
-		"3dDesign": "Watkins.stl"
+		"design": "Watkins.stl"
 	},
 	{
 		"idProduct": 128,
@@ -345,7 +345,7 @@
 		"image": "picture3.png",
 		"sound": "Asher.mp3",
 		"document": "Veda.pdf",
-		"3dDesign": "Palmer.stl"
+		"design": "Palmer.stl"
 	},
 	{
 		"idProduct": 129,
@@ -357,11 +357,11 @@
 		"image": "picture2.jpg",
 		"sound": "Lyle.mp3",
 		"document": "Kirby.pdf",
-		"3dDesign": "Dale.stl"
+		"design": "Dale.stl"
 	},
 	{
 		"idProduct": 130,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "Integer tincidunt aliquam",
 		"description": "Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum",
 		"price": 6695,
@@ -369,7 +369,7 @@
 		"image": "picture4.jpg",
 		"sound": "Dale.mp3",
 		"document": "Kiayada.pdf",
-		"3dDesign": "Benjamin.stl"
+		"design": "Benjamin.stl"
 	},
 	{
 		"idProduct": 131,
@@ -381,7 +381,7 @@
 		"image": "picture2.jpg",
 		"sound": "Keith.mp3",
 		"document": "Reagan.pdf",
-		"3dDesign": "Kirkland.stl"
+		"design": "Kirkland.stl"
 	},
 	{
 		"idProduct": 132,
@@ -393,7 +393,7 @@
 		"image": "picture2.jpg",
 		"sound": "Lars.mp3",
 		"document": "Quincy.pdf",
-		"3dDesign": "House.stl"
+		"design": "House.stl"
 	},
 	{
 		"idProduct": 133,
@@ -405,7 +405,7 @@
 		"image": "picture1.jpg",
 		"sound": "Raymond.mp3",
 		"document": "Erin.pdf",
-		"3dDesign": "West.stl"
+		"design": "West.stl"
 	},
 	{
 		"idProduct": 134,
@@ -417,7 +417,7 @@
 		"image": "picture4.jpg",
 		"sound": "Henry.mp3",
 		"document": "Kirestin.pdf",
-		"3dDesign": "Pacheco.stl"
+		"design": "Pacheco.stl"
 	},
 	{
 		"idProduct": 135,
@@ -429,7 +429,7 @@
 		"image": "picture4.jpg",
 		"sound": "Evan.mp3",
 		"document": "Breanna.pdf",
-		"3dDesign": "Taylor.stl"
+		"design": "Taylor.stl"
 	},
 	{
 		"idProduct": 136,
@@ -441,7 +441,7 @@
 		"image": "picture2.jpg",
 		"sound": "Rashad.mp3",
 		"document": "Sarah.pdf",
-		"3dDesign": "Acosta.stl"
+		"design": "Acosta.stl"
 	},
 	{
 		"idProduct": 137,
@@ -453,7 +453,7 @@
 		"image": "picture1.jpg",
 		"sound": "Mark.mp3",
 		"document": "Simone.pdf",
-		"3dDesign": "Jefferson.stl"
+		"design": "Jefferson.stl"
 	},
 	{
 		"idProduct": 138,
@@ -465,7 +465,7 @@
 		"image": "picture2.jpg",
 		"sound": "Burke.mp3",
 		"document": "Leilani.pdf",
-		"3dDesign": "Dorsey.stl"
+		"design": "Dorsey.stl"
 	},
 	{
 		"idProduct": 139,
@@ -477,7 +477,7 @@
 		"image": "picture2.jpg",
 		"sound": "Herrod.mp3",
 		"document": "Eleanor.pdf",
-		"3dDesign": "Stephenson.stl"
+		"design": "Stephenson.stl"
 	},
 	{
 		"idProduct": 140,
@@ -489,7 +489,7 @@
 		"image": "picture2.jpg",
 		"sound": "Luke.mp3",
 		"document": "Wilma.pdf",
-		"3dDesign": "Dillard.stl"
+		"design": "Dillard.stl"
 	},
 	{
 		"idProduct": 141,
@@ -501,7 +501,7 @@
 		"image": "picture3.png",
 		"sound": "Kirk.mp3",
 		"document": "Quynn.pdf",
-		"3dDesign": "Vargas.stl"
+		"design": "Vargas.stl"
 	},
 	{
 		"idProduct": 142,
@@ -513,7 +513,7 @@
 		"image": "picture3.png",
 		"sound": "Cooper.mp3",
 		"document": "Rhea.pdf",
-		"3dDesign": "Fischer.stl"
+		"design": "Fischer.stl"
 	},
 	{
 		"idProduct": 143,
@@ -525,11 +525,11 @@
 		"image": "picture4.jpg",
 		"sound": "Julian.mp3",
 		"document": "Suki.pdf",
-		"3dDesign": "Joyce.stl"
+		"design": "Joyce.stl"
 	},
 	{
 		"idProduct": 144,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "lacus. Cras interdum.",
 		"description": "Phasellus vitae mauris sit amet",
 		"price": 6962,
@@ -537,11 +537,11 @@
 		"image": "picture2.jpg",
 		"sound": "Drake.mp3",
 		"document": "Keely.pdf",
-		"3dDesign": "Mcclure.stl"
+		"design": "Mcclure.stl"
 	},
 	{
 		"idProduct": 145,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "fringilla. Donec feugiat",
 		"description": "Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu",
 		"price": 5336,
@@ -549,11 +549,11 @@
 		"image": "picture3.png",
 		"sound": "Elvis.mp3",
 		"document": "Anne.pdf",
-		"3dDesign": "Bender.stl"
+		"design": "Bender.stl"
 	},
 	{
 		"idProduct": 146,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "accumsan laoreet ipsum.",
 		"description": "Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper egestas,",
 		"price": 5147,
@@ -561,7 +561,7 @@
 		"image": "picture2.jpg",
 		"sound": "Hedley.mp3",
 		"document": "Kyra.pdf",
-		"3dDesign": "Preston.stl"
+		"design": "Preston.stl"
 	},
 	{
 		"idProduct": 147,
@@ -573,7 +573,7 @@
 		"image": "picture2.jpg",
 		"sound": "Jonah.mp3",
 		"document": "Avye.pdf",
-		"3dDesign": "Fuller.stl"
+		"design": "Fuller.stl"
 	},
 	{
 		"idProduct": 148,
@@ -585,7 +585,7 @@
 		"image": "picture2.jpg",
 		"sound": "Shad.mp3",
 		"document": "Mara.pdf",
-		"3dDesign": "Shaw.stl"
+		"design": "Shaw.stl"
 	},
 	{
 		"idProduct": 149,
@@ -597,11 +597,11 @@
 		"image": "picture4.jpg",
 		"sound": "Nasim.mp3",
 		"document": "Gretchen.pdf",
-		"3dDesign": "Moran.stl"
+		"design": "Moran.stl"
 	},
 	{
 		"idProduct": 150,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "Suspendisse non leo.",
 		"description": "sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer",
 		"price": 3937,
@@ -609,7 +609,7 @@
 		"image": "picture3.png",
 		"sound": "Drake.mp3",
 		"document": "Halee.pdf",
-		"3dDesign": "Slater.stl"
+		"design": "Slater.stl"
 	},
 	{
 		"idProduct": 151,
@@ -621,7 +621,7 @@
 		"image": "picture1.jpg",
 		"sound": "Lawrence.mp3",
 		"document": "Kessie.pdf",
-		"3dDesign": "Mann.stl"
+		"design": "Mann.stl"
 	},
 	{
 		"idProduct": 152,
@@ -633,7 +633,7 @@
 		"image": "picture2.jpg",
 		"sound": "Gareth.mp3",
 		"document": "Candice.pdf",
-		"3dDesign": "Carroll.stl"
+		"design": "Carroll.stl"
 	},
 	{
 		"idProduct": 153,
@@ -645,11 +645,11 @@
 		"image": "picture4.jpg",
 		"sound": "Cullen.mp3",
 		"document": "Ivana.pdf",
-		"3dDesign": "Hardy.stl"
+		"design": "Hardy.stl"
 	},
 	{
 		"idProduct": 154,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "nunc sed pede.",
 		"description": "Mauris vel turpis. Aliquam adipiscing",
 		"price": 2338,
@@ -657,11 +657,11 @@
 		"image": "picture4.jpg",
 		"sound": "Walter.mp3",
 		"document": "Caryn.pdf",
-		"3dDesign": "Glass.stl"
+		"design": "Glass.stl"
 	},
 	{
 		"idProduct": 155,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "nonummy ac, feugiat",
 		"description": "laoreet lectus quis massa. Mauris vestibulum,",
 		"price": 5771,
@@ -669,7 +669,7 @@
 		"image": "picture3.png",
 		"sound": "Wang.mp3",
 		"document": "Fatima.pdf",
-		"3dDesign": "Buckley.stl"
+		"design": "Buckley.stl"
 	},
 	{
 		"idProduct": 156,
@@ -681,7 +681,7 @@
 		"image": "picture3.png",
 		"sound": "Oliver.mp3",
 		"document": "Emily.pdf",
-		"3dDesign": "Goodwin.stl"
+		"design": "Goodwin.stl"
 	},
 	{
 		"idProduct": 157,
@@ -693,7 +693,7 @@
 		"image": "picture2.jpg",
 		"sound": "Hedley.mp3",
 		"document": "Chiquita.pdf",
-		"3dDesign": "Buckley.stl"
+		"design": "Buckley.stl"
 	},
 	{
 		"idProduct": 158,
@@ -705,7 +705,7 @@
 		"image": "picture2.jpg",
 		"sound": "Xavier.mp3",
 		"document": "Tatyana.pdf",
-		"3dDesign": "Hodge.stl"
+		"design": "Hodge.stl"
 	},
 	{
 		"idProduct": 159,
@@ -717,7 +717,7 @@
 		"image": "picture2.jpg",
 		"sound": "Chaim.mp3",
 		"document": "Amaya.pdf",
-		"3dDesign": "Wolf.stl"
+		"design": "Wolf.stl"
 	},
 	{
 		"idProduct": 160,
@@ -729,7 +729,7 @@
 		"image": "picture4.jpg",
 		"sound": "Walter.mp3",
 		"document": "Tamara.pdf",
-		"3dDesign": "Montoya.stl"
+		"design": "Montoya.stl"
 	},
 	{
 		"idProduct": 161,
@@ -741,7 +741,7 @@
 		"image": "picture3.png",
 		"sound": "Harrison.mp3",
 		"document": "Jennifer.pdf",
-		"3dDesign": "Vega.stl"
+		"design": "Vega.stl"
 	},
 	{
 		"idProduct": 162,
@@ -753,7 +753,7 @@
 		"image": "picture2.jpg",
 		"sound": "Oliver.mp3",
 		"document": "Macey.pdf",
-		"3dDesign": "Woodard.stl"
+		"design": "Woodard.stl"
 	},
 	{
 		"idProduct": 163,
@@ -765,7 +765,7 @@
 		"image": "picture4.jpg",
 		"sound": "Sean.mp3",
 		"document": "Sacha.pdf",
-		"3dDesign": "Callahan.stl"
+		"design": "Callahan.stl"
 	},
 	{
 		"idProduct": 164,
@@ -777,7 +777,7 @@
 		"image": "picture4.jpg",
 		"sound": "Marvin.mp3",
 		"document": "Ulla.pdf",
-		"3dDesign": "Schroeder.stl"
+		"design": "Schroeder.stl"
 	},
 	{
 		"idProduct": 165,
@@ -789,7 +789,7 @@
 		"image": "picture3.png",
 		"sound": "Benjamin.mp3",
 		"document": "Xandra.pdf",
-		"3dDesign": "Huff.stl"
+		"design": "Huff.stl"
 	},
 	{
 		"idProduct": 166,
@@ -801,7 +801,7 @@
 		"image": "picture1.jpg",
 		"sound": "Prescott.mp3",
 		"document": "Daryl.pdf",
-		"3dDesign": "English.stl"
+		"design": "English.stl"
 	},
 	{
 		"idProduct": 167,
@@ -813,7 +813,7 @@
 		"image": "picture2.jpg",
 		"sound": "Kenyon.mp3",
 		"document": "Hanae.pdf",
-		"3dDesign": "Delaney.stl"
+		"design": "Delaney.stl"
 	},
 	{
 		"idProduct": 168,
@@ -825,11 +825,11 @@
 		"image": "picture2.jpg",
 		"sound": "Cedric.mp3",
 		"document": "Reagan.pdf",
-		"3dDesign": "Pate.stl"
+		"design": "Pate.stl"
 	},
 	{
 		"idProduct": 169,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "risus quis diam",
 		"description": "Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus",
 		"price": 5111,
@@ -837,7 +837,7 @@
 		"image": "picture4.jpg",
 		"sound": "Stuart.mp3",
 		"document": "Ila.pdf",
-		"3dDesign": "Barlow.stl"
+		"design": "Barlow.stl"
 	},
 	{
 		"idProduct": 170,
@@ -849,11 +849,11 @@
 		"image": "picture2.jpg",
 		"sound": "Kenneth.mp3",
 		"document": "Eve.pdf",
-		"3dDesign": "Nelson.stl"
+		"design": "Nelson.stl"
 	},
 	{
 		"idProduct": 171,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "sit amet, risus.",
 		"description": "elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in sodales elit",
 		"price": 9590,
@@ -861,7 +861,7 @@
 		"image": "picture3.png",
 		"sound": "Keegan.mp3",
 		"document": "Emi.pdf",
-		"3dDesign": "Fitzpatrick.stl"
+		"design": "Fitzpatrick.stl"
 	},
 	{
 		"idProduct": 172,
@@ -873,7 +873,7 @@
 		"image": "picture3.png",
 		"sound": "Ivor.mp3",
 		"document": "Josephine.pdf",
-		"3dDesign": "Suarez.stl"
+		"design": "Suarez.stl"
 	},
 	{
 		"idProduct": 173,
@@ -885,7 +885,7 @@
 		"image": "picture3.png",
 		"sound": "Lyle.mp3",
 		"document": "Hanna.pdf",
-		"3dDesign": "Nielsen.stl"
+		"design": "Nielsen.stl"
 	},
 	{
 		"idProduct": 174,
@@ -897,11 +897,11 @@
 		"image": "picture4.jpg",
 		"sound": "Duncan.mp3",
 		"document": "Diana.pdf",
-		"3dDesign": "Bennett.stl"
+		"design": "Bennett.stl"
 	},
 	{
 		"idProduct": 175,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "nulla at sem",
 		"description": "Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed",
 		"price": 3747,
@@ -909,7 +909,7 @@
 		"image": "picture3.png",
 		"sound": "Micah.mp3",
 		"document": "Bethany.pdf",
-		"3dDesign": "Buck.stl"
+		"design": "Buck.stl"
 	},
 	{
 		"idProduct": 176,
@@ -921,7 +921,7 @@
 		"image": "picture4.jpg",
 		"sound": "Adrian.mp3",
 		"document": "Adele.pdf",
-		"3dDesign": "Merrill.stl"
+		"design": "Merrill.stl"
 	},
 	{
 		"idProduct": 177,
@@ -933,7 +933,7 @@
 		"image": "picture4.jpg",
 		"sound": "Graham.mp3",
 		"document": "MacKensie.pdf",
-		"3dDesign": "Howell.stl"
+		"design": "Howell.stl"
 	},
 	{
 		"idProduct": 178,
@@ -945,7 +945,7 @@
 		"image": "picture2.jpg",
 		"sound": "Kamal.mp3",
 		"document": "Carolyn.pdf",
-		"3dDesign": "Bond.stl"
+		"design": "Bond.stl"
 	},
 	{
 		"idProduct": 179,
@@ -957,7 +957,7 @@
 		"image": "picture4.jpg",
 		"sound": "Clayton.mp3",
 		"document": "Jolene.pdf",
-		"3dDesign": "Hood.stl"
+		"design": "Hood.stl"
 	},
 	{
 		"idProduct": 180,
@@ -969,7 +969,7 @@
 		"image": "picture4.jpg",
 		"sound": "August.mp3",
 		"document": "Dora.pdf",
-		"3dDesign": "Mccormick.stl"
+		"design": "Mccormick.stl"
 	},
 	{
 		"idProduct": 181,
@@ -981,7 +981,7 @@
 		"image": "picture4.jpg",
 		"sound": "Evan.mp3",
 		"document": "Jade.pdf",
-		"3dDesign": "Hoover.stl"
+		"design": "Hoover.stl"
 	},
 	{
 		"idProduct": 182,
@@ -993,11 +993,11 @@
 		"image": "picture1.jpg",
 		"sound": "Carson.mp3",
 		"document": "Xena.pdf",
-		"3dDesign": "King.stl"
+		"design": "King.stl"
 	},
 	{
 		"idProduct": 183,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "dis parturient montes,",
 		"description": "eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum",
 		"price": 8680,
@@ -1005,11 +1005,11 @@
 		"image": "picture1.jpg",
 		"sound": "Kato.mp3",
 		"document": "Melinda.pdf",
-		"3dDesign": "Vaughan.stl"
+		"design": "Vaughan.stl"
 	},
 	{
 		"idProduct": 184,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "magna et ipsum",
 		"description": "ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate,",
 		"price": 3067,
@@ -1017,11 +1017,11 @@
 		"image": "picture2.jpg",
 		"sound": "Emmanuel.mp3",
 		"document": "Rosalyn.pdf",
-		"3dDesign": "Kane.stl"
+		"design": "Kane.stl"
 	},
 	{
 		"idProduct": 185,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "libero nec ligula",
 		"description": "est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu",
 		"price": 7073,
@@ -1029,7 +1029,7 @@
 		"image": "picture4.jpg",
 		"sound": "Zahir.mp3",
 		"document": "Hannah.pdf",
-		"3dDesign": "Powers.stl"
+		"design": "Powers.stl"
 	},
 	{
 		"idProduct": 186,
@@ -1041,7 +1041,7 @@
 		"image": "picture1.jpg",
 		"sound": "Craig.mp3",
 		"document": "Amaya.pdf",
-		"3dDesign": "Vinson.stl"
+		"design": "Vinson.stl"
 	},
 	{
 		"idProduct": 187,
@@ -1053,11 +1053,11 @@
 		"image": "picture2.jpg",
 		"sound": "Brendan.mp3",
 		"document": "Erin.pdf",
-		"3dDesign": "Maynard.stl"
+		"design": "Maynard.stl"
 	},
 	{
 		"idProduct": 188,
-		"category": "3dDesign",
+		"category": "design",
 		"title": "in consequat enim",
 		"description": "Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non",
 		"price": 8846,
@@ -1065,7 +1065,7 @@
 		"image": "picture1.jpg",
 		"sound": "Timon.mp3",
 		"document": "Chiquita.pdf",
-		"3dDesign": "Bowers.stl"
+		"design": "Bowers.stl"
 	},
 	{
 		"idProduct": 189,
@@ -1077,7 +1077,7 @@
 		"image": "picture1.jpg",
 		"sound": "Berk.mp3",
 		"document": "Shannon.pdf",
-		"3dDesign": "Hooper.stl"
+		"design": "Hooper.stl"
 	},
 	{
 		"idProduct": 190,
@@ -1089,7 +1089,7 @@
 		"image": "picture1.jpg",
 		"sound": "Eagan.mp3",
 		"document": "Emma.pdf",
-		"3dDesign": "Irwin.stl"
+		"design": "Irwin.stl"
 	},
 	{
 		"idProduct": 191,
@@ -1101,7 +1101,7 @@
 		"image": "picture4.jpg",
 		"sound": "Scott.mp3",
 		"document": "Cecilia.pdf",
-		"3dDesign": "Jarvis.stl"
+		"design": "Jarvis.stl"
 	},
 	{
 		"idProduct": 192,
@@ -1113,7 +1113,7 @@
 		"image": "picture2.jpg",
 		"sound": "Rafael.mp3",
 		"document": "Paula.pdf",
-		"3dDesign": "Byers.stl"
+		"design": "Byers.stl"
 	},
 	{
 		"idProduct": 193,
@@ -1125,7 +1125,7 @@
 		"image": "picture3.png",
 		"sound": "Demetrius.mp3",
 		"document": "Sonya.pdf",
-		"3dDesign": "Hickman.stl"
+		"design": "Hickman.stl"
 	},
 	{
 		"idProduct": 194,
@@ -1137,7 +1137,7 @@
 		"image": "picture3.png",
 		"sound": "Omar.mp3",
 		"document": "MacKenzie.pdf",
-		"3dDesign": "Conner.stl"
+		"design": "Conner.stl"
 	},
 	{
 		"idProduct": 195,
@@ -1149,7 +1149,7 @@
 		"image": "picture2.jpg",
 		"sound": "Theodore.mp3",
 		"document": "Remedios.pdf",
-		"3dDesign": "Cruz.stl"
+		"design": "Cruz.stl"
 	},
 	{
 		"idProduct": 196,
@@ -1161,7 +1161,7 @@
 		"image": "picture1.jpg",
 		"sound": "Kennedy.mp3",
 		"document": "Rana.pdf",
-		"3dDesign": "Erickson.stl"
+		"design": "Erickson.stl"
 	},
 	{
 		"idProduct": 197,
@@ -1173,7 +1173,7 @@
 		"image": "picture4.jpg",
 		"sound": "Griffith.mp3",
 		"document": "Callie.pdf",
-		"3dDesign": "Charles.stl"
+		"design": "Charles.stl"
 	},
 	{
 		"idProduct": 198,
@@ -1185,7 +1185,7 @@
 		"image": "picture3.png",
 		"sound": "Tyler.mp3",
 		"document": "Anika.pdf",
-		"3dDesign": "Potts.stl"
+		"design": "Potts.stl"
 	},
 	{
 		"idProduct": 199,
@@ -1197,6 +1197,6 @@
 		"image": "picture2.jpg",
 		"sound": "Kaseem.mp3",
 		"document": "Bethany.pdf",
-		"3dDesign": "Ferguson.stl"
+		"design": "Ferguson.stl"
 	}
 ]

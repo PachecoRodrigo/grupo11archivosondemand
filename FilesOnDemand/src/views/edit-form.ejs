@@ -14,9 +14,12 @@
 
 
     <section class="create_product_section">
+        <% oneproduct.forEach(item => { %>
+         
+
 
         <div class="create_produc_title">
-           <h2>Editando: Nombre del producto</h2>
+           <h2>Editando: <%= item.title %></h2>
         </div>
 
         
@@ -24,35 +27,35 @@
                 <div class="grid_create_form">
                 <div class="input_box">
                     <label for="" class="label_decoration">Nombre del producto:</label>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" value="<%= item.title %>">
                 </div>
 
                 <div class="input_box">
                     <label for="" class="label_decoration">Precio:</label>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" value="<%= item.price %>">
                 </div>
 
                 <div class="input_box">
                     <label for="" class="label_decoration">Categoria:</label>
-                    <select name="" id="" class="">
-                        <option value="default"  selected disabled>Seleccione una categoria</option>
-                        <option value="value1">Audio</option> 
-                        <option value="value2">Imagen</option>
-                        <option value="value3">Escritura</option>
-                        <option value="value3">Diseño</option>
+                    <select name="" id="" class="" >
+                        <option value="default"  selected  <%= item.category %>>Seleccione una categoria</option>
+                        <option value="sound">Audio</option> 
+                        <option value="image">Imagen</option>
+                        <option value="document">Escritura</option> 
+                        <option value="design">Diseño</option>
 
                     </select>
                 </div>
                 
                 <div class="input_box">
                     <label for="" class="label_decoration">Imagen:</label>
-                    <input type="file" name="" id="">
+                    <input type="file" name="" id="" value="<%= item.image %>">
                 </div>
                 </div>
 
                 <div class="description_box">
                     <label for="" class="label_decoration">Descripcion:</label>
-                   <textarea name="bio" id="" cols="30" rows="10"></textarea>
+                   <textarea name="bio" id="" cols="30" rows="10" ><%= item.description %></textarea>
 
                 </div>
 
@@ -63,7 +66,7 @@
                 </div>
             </form>
 
-
+            <% }) %>
 
     </section>
 

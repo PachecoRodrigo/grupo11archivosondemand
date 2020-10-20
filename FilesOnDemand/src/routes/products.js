@@ -6,8 +6,8 @@ var productsController = require(path.join(__dirname,'..','controllers','product
 
 /* GET users listing. */
 router.get('/', productsController.index);
-router.get('/detail/:idProduct', productsController.detail);
+router.get('/detail', productsController.detail);
 router.get('/create-form', productsController.create);
-router.get('/:idProducto/edit-form', productsController.edit);
+router.get('/edit-form/:idProduct', productsController.edit);
 
 module.exports = router;
