@@ -110,7 +110,7 @@ body{
 .submit-button{
     transition: all 0.3s ease 0s;
     margin-top: 15px;
-	background-color: #ffd600;
+	background-color:yellow;
 	border-radius: 10em;
 	border: none;
 	padding: 20px 40px;
@@ -120,7 +120,7 @@ body{
 	outline: none;
 	}
     .submit-button:hover {
-	background-color:#ffd600;
+	background-color:yellow;
 	color:black;
 	transform: translateX(-7px);
   }
