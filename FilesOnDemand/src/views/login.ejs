@@ -30,13 +30,23 @@
                 
                 </div>
 
-            <form class="input-fields">
+            <form class="input-fields" method="POST" action="/users/login">
+
+                <% if (typeof(error) != 'undefined') { %>
                 
-                
-                <input class="input-decoration" type="email" placeholder="E-mail">
-                <input class="input-decoration" type="password" placeholder="Contraseña">
+                    <p class="error_message"><%= "El usuario y/o contraseña es incorrecto" %> </p>
+                <% } %>
+
+                <input class="input-decoration" type="email" placeholder="E-mail" name="email" value=<% if (typeof(error) != 'undefined') { %> <%= old.email %>  <% } %>>
+                <input class="input-decoration" type="password" placeholder="Contraseña" name="password">
                 <a href="">¿Olvidaste tu contraseña?</a>
+                
+                <div class="remember_me_box">
+                <input type="checkbox" name="rememberMe">
+                <span class="remember_me">Recordarme</span>
+                </div>
                 <button class="submit-button">Iniciar Sesión</button>
+
                 
                 
             </form>

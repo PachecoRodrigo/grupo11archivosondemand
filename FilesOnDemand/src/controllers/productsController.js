@@ -19,7 +19,12 @@ module.exports = {
         res.render('detail',{ oneproduct });
         },
     create: (req,res)=>{
-        res.render('create-form');
+        if(req.session.email){
+            return res.render('create-form');
+        }else{
+            return res.redirect('/users/login');
+        }
+
     },
     edit: (req,res)=>{
         let id = (req.params.idProduct);        

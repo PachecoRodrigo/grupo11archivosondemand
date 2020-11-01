@@ -25,7 +25,7 @@ body{
     box-sizing: border-box;
     padding: 30px;
 
-    min-width:40% ;
+    min-width:60% ;
     background-color:black;
 
     border-radius: 10px;
@@ -105,6 +105,27 @@ body{
 	color:black;
 	transform: translateX(-7px);
   }
+
+  .error_message{
+      color: red;
+  }
+
+  
+  .remember_me_box{
+    margin-top: 7px;
+    display: flex;
+    align-content: center;
+  }
+
+  .remember_me_box span{
+      display: inline-block;
+      margin-left: 5px;
+      color: white;
+  }
+
+  .remember_me_box input{
+    transform: scale(1.2);
+}
 
 
 
