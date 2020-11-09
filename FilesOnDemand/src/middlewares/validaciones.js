@@ -2,16 +2,14 @@ const { body, validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 
-
-
 let getDB = () => {
     let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data', 'usersDB.json')))
     return usuarios
 }
 module.exports = {
     register: [
-        body('email').custom(value =>{
-            if (getDB().find(element => element.email == "nacho.tornati@gmail.com") !== undefined) {
+        body('email').custom((value,{req}) =>{
+            if (getDB().find(element => element.email == req.body.email) !== undefined) {
                 throw new Error('El correo ingresado ya se encuentra registrado');
               }
               return true;
@@ -19,11 +17,11 @@ module.exports = {
 
         body('name')
         .isLength({ min: 2 })
-        .withMessage("El campo de nombre no puede estar vacio"),
+        .withMessage("El campo de nombre debe tener 2 caracteres como minimo"),
 
         body('surname').
         isLength({ min: 2 })
-        .withMessage("El campo de apellido no puede estar vacio"),
+        .withMessage("El campo de apellido debe tener 2 caracteres como minimo"),
         
         body('email')
         .isEmail()
@@ -50,6 +48,27 @@ module.exports = {
 
         body('password')
         .isLength({ min: 8 })
+
+    ],
+    store:[
+        body('name')
+        .isLength({ min: 2 })
+        .withMessage("El campo de nombre debe tener 2 caracteres como minimo"),
+
+        body('price').custom((value) => !isNaN(parseInt(value)))
+        .withMessage("Ingrese un precio valido"),
+
+        body('description')
+        .notEmpty()
+        .withMessage("El campo de descripcion no puede estar vacio"),
+
+        body('category')
+        .notEmpty()
+        .withMessage("Seleccione una categoria"),
+
+        body('product_img')
+        .custom((value,{req}) => req.file) //Si no existe req.file la verificacion no va a pasar
+        .withMessage("La imagen no es valida o no se ha elegido ninguna")
 
     ]
 }

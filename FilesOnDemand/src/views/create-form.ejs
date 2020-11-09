@@ -19,39 +19,66 @@
         </div>
 
         
-            <form action="/store-product" method="POST">
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
+                <div class="error_messages">
+                    <% if (typeof(errors) != 'undefined') { %>
+
+                        <% for( let index = 0; index < errors.length; index++ ) { %>
+                            <p><%= errors[index].msg %> </p>
+                        <% } %> 
+
+                    <% } %>
+
+                </div>
                 <div class="grid_create_form">
                 <div class="input_box">
                     <label for="" class="label_decoration">Nombre del producto:</label>
-                    <input type="text" name="name" id="">
+                    <input type="text" name="name" id="name" <% if (typeof(old) != 'undefined') { %> value= <%= old.name %> <%} %>>
                 </div>
 
                 <div class="input_box">
                     <label for="" class="label_decoration">Precio:</label>
-                    <input type="text" name="price" id="">
+                    <input type="text" name="price" id="price" <% if (typeof(old) != 'undefined') { %> value= <%= old.price %> <%} %>>
                 </div>
-
+                    
                 <div class="input_box">
                     <label for="" class="label_decoration">Categoria:</label>
-                    <select name="category" id="" class="">
-                        <option value="default"  selected disabled>Seleccione una categoria</option>
-                        <option value="value1">Audio</option> 
-                        <option value="value2">Imagen</option>
-                        <option value="value3">Escritura</option>
-                        <option value="value3">Diseño</option>
+                    <select name="category" id="category" class="">
 
+                        <% if (typeof(old) == 'undefined') { %> 
+
+                        <option value="default" selected disabled>Seleccione una categoria</option>
+                        <option value="audio">Audio</option> 
+                        <option value="image">Imagen</option>
+                        <option value="writing">Escritura</option>
+                        <option value="design">Diseño</option>
+
+
+
+                        <% } else{
+                            let category = old.category
+                            %>
+
+                            <option value="default" disabled>Seleccione una categoria</option>
+                            <option value="audio" <% if (category == 'audio') { %> <%= 'selected' %> <% } %>>Audio</option> 
+                            <option value="image" <% if (category == 'image') { %> <%= 'selected' %> <% } %>>Imagen</option>
+                            <option value="writing" <% if (category == 'writing') { %> <%= 'selected' %> <% } %>>Escritura</option>
+                            <option value="design" <% if (category == 'design') { %> <%= 'selected' %> <% } %>>Diseño</option>
+
+                             
+                        <% } %>
                     </select>
                 </div>
                 
                 <div class="input_box">
                     <label for="" class="label_decoration">Imagen:</label>
-                    <input type="file" name="iamge" id="">
+                    <input class="img_field" type="file" name="product_img" id="" enctype="multipart/form-data">
                 </div>
                 </div>
 
                 <div class="description_box">
                     <label for="" class="label_decoration">Descripcion:</label>
-                   <textarea name="description" id="" cols="30" rows="10"></textarea>
+                   <textarea name="description" id="" cols="30" rows="10"><% if (typeof(old) != 'undefined') { %> <%= old.description %> <%} %></textarea>
 
                 </div>
 

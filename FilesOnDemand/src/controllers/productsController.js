@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { body, validationResult } = require('express-validator');
 
 // LEENDO LOS DATOS DE LOS PRODUCTOS JSON
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
@@ -32,5 +33,15 @@ module.exports = {
             return element.idProduct == id;
         });
         res.render('edit-form',{ oneproduct });
+    },
+
+    store: (req,res)=>{
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+            return res.render('create-form', {errors: errors.array(), old: req.body})
+        }else{
+            console.log(req.file)
+        }
     }
 }
