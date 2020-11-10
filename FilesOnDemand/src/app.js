@@ -4,16 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require('multer');
-<<<<<<< HEAD
 var validator = require('express-validator');
-const methodOverride = require('method-override');
 
-=======
+
 var methodOverride = require('method-override');
 var session = require('express-session');
 
 var log = require(path.join(__dirname, 'middlewares', 'log.js'));
->>>>>>> master
 
 
 

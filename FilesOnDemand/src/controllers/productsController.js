@@ -35,7 +35,6 @@ module.exports = {
         res.render('edit-form',{ oneproduct });
     },
 
-<<<<<<< HEAD
     destroy: (req,res)=> {
 
         products= products.filter(producto => producto.idProduct != req.params.idProduct)
@@ -43,9 +42,9 @@ module.exports = {
 		let baseActualizada = JSON.stringify(products, null, 2);
 		fs.writeFileSync (productsFilePath, baseActualizada);
 
-		res.redirect('/products')
+        res.redirect('/products')
+    },
 
-=======
     store: (req,res)=>{
         const errors = validationResult(req);
 
@@ -54,6 +53,5 @@ module.exports = {
         }else{
             console.log(req.file)
         }
->>>>>>> master
     }
 }

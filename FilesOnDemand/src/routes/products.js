@@ -33,16 +33,13 @@ var productsController = require(path.join(__dirname,'..','controllers','product
 /* GET users listing. */
 router.get('/', productsController.index);
 router.get('/detail/:idProduct', productsController.detail);
-<<<<<<< HEAD
 router.get('/create-form', productsController.create);
 router.get('/edit-form/:idProduct', productsController.edit);
 router.delete('/:idProduct', productsController.destroy); 
-=======
 router.get('/create',productsController.create);
 router.get('/edit-form/:idProduct',productsController.edit);
 
 //POST routes
 router.post('/create',upload.single('product_img'),validations.store ,productsController.store);
->>>>>>> master
 
 module.exports = router;
