@@ -15,7 +15,7 @@
     <section class="body-description">
 
         <section class="product-wrapper">
-            <% oneproduct.forEach(item => { %>
+            <% oneProduct.forEach(item => { %>
                             
             <div class="product-title">
                 <h1><%= item.title %></h1>
@@ -54,6 +54,12 @@
                         <div class="add-chart">
                             <button class="button-chart"><a href="/cart">Agregar</a></button>
                             <button class="button-chart"><a href="/products/edit-form/<%= item.idProduct %>">Editar</a></button>
+
+                            <form action="/products/<%= item.idProduct %>?_method=DELETE" method="POST" >
+                                <button type="submit" class="delete">Eliminar</button>
+                            </form>
+
+                             <!--<button class="button-chart"><a href="#">Eliminar</a></button>-->
                         </div>
                     
                         <div class="product-price">

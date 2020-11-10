@@ -3,7 +3,7 @@ const path = require('path');
 
 // LEENDO LOS DATOS DE LOS PRODUCTOS JSON
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 module.exports = {
@@ -13,10 +13,10 @@ module.exports = {
  
     detail: (req,res)=>{
         let id = (req.params.idProduct);
-        let oneproduct = products.filter(function(element){
+        let oneProduct = products.filter(function(element){
             return element.idProduct == id;
             });
-        res.render('detail',{ oneproduct });
+        res.render('detail',{ oneProduct });
         },
     create: (req,res)=>{
         res.render('create-form');
@@ -27,5 +27,16 @@ module.exports = {
             return element.idProduct == id;
         });
         res.render('edit-form',{ oneproduct });
+    },
+
+    destroy: (req,res)=> {
+
+        products= products.filter(producto => producto.idProduct != req.params.idProduct)
+
+		let baseActualizada = JSON.stringify(products, null, 2);
+		fs.writeFileSync (productsFilePath, baseActualizada);
+
+		res.redirect('/products')
+
     }
 }
