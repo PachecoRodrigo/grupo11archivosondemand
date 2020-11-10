@@ -18,17 +18,31 @@ h1.lema{
 }
 
 .link{
+    display: inline;
     text-decoration: none;
     font-size: medium;
     color: white;
     padding: 10px;
-    
+}
+
+.logout_button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+
 }
 
 
 .main-nav{
     align-self: flex-end; 
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .main-footer{

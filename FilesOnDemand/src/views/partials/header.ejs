@@ -7,8 +7,17 @@
     <!--<a href="/products" class= "archivos" id="todosArchivos"><i class='archivos'></i> Todos los archivos</a>-->
     <nav class="main-nav">
         <a href="/products" style="color: yellow; font-weight: bold;" class= "link" ><i class='archivos'></i>ARCHIVOS</a>
-        <a href="/users/register" class= "link"><i class='fas fa-plus-circle'></i> CREAR CUENTA</a>
-        <a href="/users/login" class= "link"><i class='fas fa-user-circle'></i> INICIAR SESIÓN</a>
+        <% if (!email) { %>
+            <a href="/users/register" class= "link"><i class='fas fa-plus-circle'></i> CREAR CUENTA</a>
+            <a href="/users/login" class= "link"><i class='fas fa-user-circle'></i> INICIAR SESIÓN</a>
+        <% } %>
+
+        <% if (email) { %>
+            <a href="#" class= "link"> <%= email %> </a>
+            <form action="/users/logout" method="POST" id="logout">
+                <button type="submit" class= "link logout_button"><i class="fas fa-sign-out-alt"></i></button> 
+            </form>
+        <% } %>
         <a href="/cart"class="link"><i class='fas fa-shopping-cart'></i></a>
     </nav>
 </header>

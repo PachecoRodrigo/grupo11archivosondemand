@@ -4,9 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require('multer');
+<<<<<<< HEAD
 var validator = require('express-validator');
 const methodOverride = require('method-override');
 
+=======
+var methodOverride = require('method-override');
+var session = require('express-session');
+
+var log = require(path.join(__dirname, 'middlewares', 'log.js'));
+>>>>>>> master
 
 
 
@@ -14,7 +21,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var cartRouter = require('./routes/cart');
-var session = require('express-session');
+
 
 
 
@@ -41,6 +48,7 @@ app.use(session({
 
 
 //Middlewares propios
+app.use(log);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

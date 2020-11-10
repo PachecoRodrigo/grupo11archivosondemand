@@ -101,6 +101,10 @@ body{
 
 }
 
+.img_field{
+    color: white;
+}
+
 
 .create_button{
     text-align: center;
@@ -124,6 +128,11 @@ body{
 	color:black;
 	transform: translateX(-7px);
   }
+
+  .error_messages{
+    color: red;
+}
+
 
   @media (max-width: 800px){
     .grid_create_form{
