@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require('multer');
+var validator = require('express-validator');
+
+
 var methodOverride = require('method-override');
 var session = require('express-session');
 
@@ -38,6 +41,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+
 
 
 //Middlewares propios

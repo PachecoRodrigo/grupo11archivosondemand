@@ -16,6 +16,10 @@
     <section class="body-description">
 
         <section class="product-wrapper">
+<<<<<<< HEAD
+=======
+            <% oneProduct.forEach(item => { %>
+>>>>>>> 76550def61dfbab3ab157371b01f547de81d94ec
                             
             <div class="product-title">
                 <h1><%= oneproduct.title %></h1>
@@ -48,7 +52,17 @@
                     
                         <div class="add-chart">
                             <button class="button-chart"><a href="/cart">Agregar</a></button>
+<<<<<<< HEAD
                             <button class="button-chart"><a href="/products/edit/<%= oneproduct.idProduct %>">Editar</a></button>
+=======
+                            <button class="button-chart"><a href="/products/edit-form/<%= item.idProduct %>">Editar</a></button>
+
+                            <form action="/products/<%= item.idProduct %>?_method=DELETE" method="POST" >
+                                <button type="submit" class="delete">Eliminar</button>
+                            </form>
+
+                             <!--<button class="button-chart"><a href="#">Eliminar</a></button>-->
+>>>>>>> 76550def61dfbab3ab157371b01f547de81d94ec
                         </div>
                     
                         <div class="product-price">

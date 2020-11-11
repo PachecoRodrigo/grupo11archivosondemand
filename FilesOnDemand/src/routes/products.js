@@ -34,6 +34,9 @@ var productsController = require(path.join(__dirname,'..','controllers','product
 /* GET users listing. */
 router.get('/', productsController.index);
 router.get('/detail/:idProduct', productsController.detail);
+router.get('/create-form', productsController.create);
+router.get('/edit-form/:idProduct', productsController.edit);
+router.delete('/:idProduct', productsController.destroy); 
 router.get('/create',productsController.create);
 router.get('/edit/:idProduct',productsController.edit);
 

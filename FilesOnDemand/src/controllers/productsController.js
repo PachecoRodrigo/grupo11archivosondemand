@@ -21,7 +21,7 @@ module.exports = {
         let oneproduct = products.find(function(element){
             return element.idProduct == id;
             });
-        res.render('detail',{ oneproduct });
+        res.render('detail',{ oneProduct });
         },
     create: (req,res)=>{
         if(req.session.email){
@@ -67,6 +67,16 @@ module.exports = {
 
             res.redirect('/products/detail/' + req.params.idProduct);
         }
+    },
+
+    destroy: (req,res)=> {
+
+        products= products.filter(producto => producto.idProduct != req.params.idProduct)
+
+		let baseActualizada = JSON.stringify(products, null, 2);
+		fs.writeFileSync (productsFilePath, baseActualizada);
+
+        res.redirect('/products')
     },
 
     store: (req,res)=>{

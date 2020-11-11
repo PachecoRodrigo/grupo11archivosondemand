@@ -100,19 +100,28 @@ img.produ__img{
 h4{
 	margin: 10px;
 	font-weight: normal;
+	color: white;
 }
 h5{
 	margin: 10px;
+	color: white;
 }
 a{
 	text-decoration: none;
 	margin: 0px;
 	color: black;
 }
+article{
+	background-color:black;
+	border-radius: 10px;
+	margin: 2px;
+
+}
 article.productos:hover {
 	transition: 1s;
 	opacity: 70%;
 	transform: scale(1.1);
+	
 }
 section.busca__categorias{
 	display: flex;

@@ -80,6 +80,24 @@ button.button-chart:hover {
 	transform: translateY(-7px);
 }
 
+button.delete {
+    margin-top: 20px;
+    width: 120px;
+    height: 52px;
+	background-color: rgb(255, 255, 194);
+	border-radius: 10em;
+	border: none;
+	font-size: 18pt;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+    outline: none;
+    text-decoration: none;
+
+}
+
+
+
 
 
 /*Inicio modal imagen*/
