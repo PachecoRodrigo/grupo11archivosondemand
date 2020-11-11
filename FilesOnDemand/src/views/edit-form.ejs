@@ -5,6 +5,7 @@
 
  <!-- link css -->
         <link rel="stylesheet" href="\styles\create-form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        
 <body>
 
@@ -14,45 +15,54 @@
 
 
     <section class="create_product_section">
-        <% oneproduct.forEach(item => { %>
          
         <div class="create_produc_title">
-           <h2>Editando: <%= item.title %></h2>
+           <h2>Editando: <%= product.title %></h2>
         </div>
 
-            <form action="">
+            <form action="/products/edit/<%= product.idProduct %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="error_messages">
+                    <% if (typeof(errors) != 'undefined') { %>
+
+                        <% for( let index = 0; index < errors.length; index++ ) { %>
+                            <p><%= errors[index].msg %> </p>
+                        <% } %> 
+
+                    <% } %>
+
+                </div>
                 <div class="grid_create_form">
                 <div class="input_box">
                     <label for="" class="label_decoration">Nombre del producto:</label>
-                    <input type="text" name="" id="" value="<%= item.title %>">
+                    <input type="text" name="title" id="title" value="<%= product.title %>">
                 </div>
 
                 <div class="input_box">
                     <label for="" class="label_decoration">Precio:</label>
-                    <input type="text" name="" id="" value="<%= item.price %>">
+                    <input type="text" name="price" id="price" value="<%= product.price %>">
                 </div>
 
                 <div class="input_box">
                     <label for="" class="label_decoration">Categoria:</label>
-                    <select name="" id="" class="" >
-                        <option value="default"  selected  <%= item.category %>>Seleccione una categoria</option>
-                        <option value="sound">Audio</option> 
-                        <option value="image">Imagen</option>
-                        <option value="document">Escritura</option> 
-                        <option value="design">Diseño</option>
+                    <select name="category" id="category" class="category" >
+                        <option value="default" disabled >Seleccione una categoria</option>
+                        <option value="sound" <% if (product.category = "sound") { %> <%= "selected" %>  <% } %>>Audio</option> 
+                        <option value="image" <% if (product.category = "image") { %> <%= "selected" %>  <% } %>>Imagen</option>
+                        <option value="document" <% if (product.category = "document") { %> <%= "selected" %>  <% } %>>Escritura</option> 
+                        <option value="design" <% if (product.category = "design") { %> <%= "selected" %>  <% } %>>Diseño</option>
 
                     </select>
                 </div>
                 
                 <div class="input_box">
                     <label for="" class="label_decoration">Imagen:</label>
-                    <input type="file" name="" id="" value="<%= item.image %>">
+                    <input class="img_field" type="file" name="product_img" id="" enctype="multipart/form-data">
                 </div>
                 </div>
 
                 <div class="description_box">
                     <label for="" class="label_decoration">Descripcion:</label>
-                   <textarea name="bio" id="" cols="30" rows="10" ><%= item.description %></textarea>
+                   <textarea name="description" id="" cols="30" rows="10" ><%= product.description %></textarea>
 
                 </div>
 
@@ -62,8 +72,6 @@
 
                 </div>
             </form>
-
-            <% }) %>
 
     </section>
 

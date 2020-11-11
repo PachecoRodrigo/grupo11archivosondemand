@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var multer  = require('multer');
+const validaciones = require('../middlewares/validaciones');
 var validations = require(path.join(__dirname,'..','middlewares','validaciones.js'));
 
 
@@ -34,9 +35,10 @@ var productsController = require(path.join(__dirname,'..','controllers','product
 router.get('/', productsController.index);
 router.get('/detail/:idProduct', productsController.detail);
 router.get('/create',productsController.create);
-router.get('/edit-form/:idProduct',productsController.edit);
+router.get('/edit/:idProduct',productsController.edit);
 
 //POST routes
-router.post('/create',upload.single('product_img'),validations.store ,productsController.store);
+router.post('/create',upload.single('product_img'),validations.product ,productsController.store);
+router.put('/edit/:idProduct',upload.single('product_img'),validations.product,productsController.update);
 
 module.exports = router;

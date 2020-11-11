@@ -16,5 +16,11 @@
     "surname": "Tornati",
     "email": "n@g.com",
     "password": "$2b$10$gqtL9Xob37COzRepFamereq4K50TWYod6RdCef336WU9Ax5.SDKW2"
+  },
+  {
+    "name": "Facun",
+    "surname": "Toffolo",
+    "email": "fac@gmail.com",
+    "password": "$2b$10$.p0f4hpuuAwueVcuPBXVOuGZxKaWNN2oWIvlvSBNnZAlA9BONY9xm"
   }
 ]

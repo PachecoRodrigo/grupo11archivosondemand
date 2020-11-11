@@ -50,12 +50,12 @@ module.exports = {
         .isLength({ min: 8 })
 
     ],
-    store:[
-        body('name')
+    product:[
+        body('title')
         .isLength({ min: 2 })
         .withMessage("El campo de nombre debe tener 2 caracteres como minimo"),
 
-        body('price').custom((value) => !isNaN(parseInt(value)))
+        body('price').custom((value) => !isNaN(value))
         .withMessage("Ingrese un precio valido"),
 
         body('description')

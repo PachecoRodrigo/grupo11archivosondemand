@@ -5,6 +5,7 @@
 
   <!-- link css -->
     <link rel="stylesheet" href="/styles/styledetalle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <body>
      <!-- header -->
@@ -15,10 +16,9 @@
     <section class="body-description">
 
         <section class="product-wrapper">
-            <% oneproduct.forEach(item => { %>
                             
             <div class="product-title">
-                <h1><%= item.title %></h1>
+                <h1><%= oneproduct.title %></h1>
             </div>
 
             <section class="product">
@@ -28,7 +28,7 @@
                 <article class="product-img">
                     
                     <!-- Trigger the Modal -->
-                    <img id="myImg" src="/img/<%= item.image %>" alt="Music">
+                    <img id="myImg" src="/img/products/<%= oneproduct.image %>" alt="Music">
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
                             <!-- The Close Button -->
@@ -39,30 +39,24 @@
                             <div id="caption"></div>
                         </div>
 
-
-                    <audio controls volume="0.9"  class="audio-example">
-                        <source src="/media/<%= item.sound %>" type="audio/mp3">
-                        You will see this text if native audio playback is not supported.
-                    </audio>
                 </article>
 
                 <article class="product-description">
-                    <p><%= item.description %></p>
+                    <p><%= oneproduct.description %></p>
                     
                     <div class="product-options">
                     
                         <div class="add-chart">
                             <button class="button-chart"><a href="/cart">Agregar</a></button>
-                            <button class="button-chart"><a href="/products/edit-form/<%= item.idProduct %>">Editar</a></button>
+                            <button class="button-chart"><a href="/products/edit/<%= oneproduct.idProduct %>">Editar</a></button>
                         </div>
                     
                         <div class="product-price">
-                            <h2><%= item.price %></h2>
+                            <h2><%= oneproduct.price %></h2>
                         </div>
                     </div>
                 </article>
             </section>
-            <% }) %>
         </section>
     </section>
     <!--fin detalle del producto -->
