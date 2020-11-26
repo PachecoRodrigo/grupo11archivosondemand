@@ -18,10 +18,14 @@ module.exports = {
     detail: (req,res)=>{
         let id = (req.params.idProduct);
         let products = readDB();
-        let oneproduct = products.find(function(element){
-            return element.idProduct == id;
-            });
-        res.render('detail',{ oneProduct });
+        let oneproduct = products.find((element => element.idProduct == id))
+        if(typeof oneproduct == "undefined"){
+            res.send("404 not found")
+        }else{
+        res.render('detail',{ oneproduct });
+        }
+
+
         },
     create: (req,res)=>{
         if(req.session.email){
@@ -37,7 +41,7 @@ module.exports = {
         let product = products.find(function(element){
             return element.idProduct == id;
         });
-        res.render('edit-form',{ product:product });
+        res.render('edit-form',{ product });
     },
 
     update: (req,res) =>{

@@ -3,6 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 
+//Configuracion de sequelize
+const db = require(path.join('..','db','models'));
+const { Op, where } = require("sequelize");
+
 let getDB = () => {
   let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data', 'usersDB.json')))
   return usuarios
