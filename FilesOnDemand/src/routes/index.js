@@ -5,5 +5,6 @@ var mainController = require(path.join(__dirname,'..','controllers','mainControl
 
 /* GET home page. */
 router.get('/', mainController.index);
+router.get('/test', mainController.test);
 
 module.exports = router;

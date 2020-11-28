@@ -14,7 +14,27 @@
         <!--fin del header -->
 
     <section class="busquedas">
-        <form class="barras">        
+        <form action="/products/search" method="POST" class="busqueda">
+            <input  class= "busqueda" type="text" name="products" placeholder="Que estas buscando?">
+            
+            <select name="categories" id="categories" onchange="getSelectValue();">
+                <option selected value="title"> Tipo de Archivo </option>
+                    <option value="imagen" >Imagen</option> 
+                    <option value="audio" >Audio</option> 
+                    <option value="escritura">Escritura</option> 
+                    <option value="diseño">Diseño</option> 
+            </select>                         
+            <button type="submit" class= "submit" ><i>Buscar</i></button>
+            <script>
+        
+                function getSelectValue(){ 
+                    var selectedValue = document.getElementById("orden").value;
+                }
+                getSelectValue();
+        
+            </script>
+            </form>
+        <!--<form class="barras">        
             <input type="search" placeholder="Busca canciones, sonidos o efectos">
         </form>	
         <form class="barras">
@@ -25,7 +45,7 @@
         </form>	
         <form class="barras">
             <input class="disenio" type="search" placeholder="Busca 3D, planos o maquetas">
-        </form>	
+        </form>	-->
     </section>
     <h3 class= destacados>Archivos Destacados</h3>
     <section class= "productos__destacados">

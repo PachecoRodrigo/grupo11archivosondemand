@@ -8,7 +8,12 @@ module.exports = (sequelize, dataTypes) =>{
     },{
         underscored: true,
         timestamps: true
-    })
+    });
+    User.associate = models =>{
+        User.belongsToMany(models.Product, {
+            through: 'users_products',
+        });
+    };
 
 
     return User
