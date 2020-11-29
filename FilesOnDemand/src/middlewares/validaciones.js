@@ -15,11 +15,11 @@ module.exports = {
               return true;
         }),
 
-        body('name')
+        body('first_name')
         .isLength({ min: 2 })
         .withMessage("El campo de nombre debe tener 2 caracteres como minimo"),
 
-        body('surname').
+        body('last_name').
         isLength({ min: 2 })
         .withMessage("El campo de apellido debe tener 2 caracteres como minimo"),
         

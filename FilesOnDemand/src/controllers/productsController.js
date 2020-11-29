@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { body, validationResult } = require('express-validator');
 
+const db = require(path.join('..','db','models'));
+const { Op, where } = require("sequelize");
+
 // LEENDO LOS DATOS DE LOS PRODUCTOS JSON
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 
@@ -15,16 +18,18 @@ module.exports = {
         res.render('allProducts', { products: readDB() });
       },
  
-    detail: (req,res)=>{
+    detail: async (req,res)=>{
         let id = (req.params.idProduct);
-        let products = readDB();
-        let oneproduct = products.find((element => element.idProduct == id))
-        if(typeof oneproduct == "undefined"){
-            res.send("404 not found")
-        }else{
-        res.render('detail',{ oneproduct });
+        try{
+            let oneproduct = await db.Product.findByPk(id);
+            if(oneproduct == null){
+                res.send("404 not found")
+            }else{
+            res.render('detail',{ oneproduct });
+            }
+        }catch(error){
+            res.send(error);
         }
-
 
         },
     create: (req,res)=>{
@@ -62,7 +67,7 @@ module.exports = {
             let editedProduct = {
                 idProduct: product.idProduct,
                 ...req.body,
-                image: req.file.filename
+                image: req.file.filename,
             }
 
             products[products.indexOf(product)] = editedProduct
@@ -91,9 +96,9 @@ module.exports = {
         }else{
             let oldProducts = readDB();
             let newProduct = {
-                idProduct: oldProducts[oldProducts.length-1].idProduct + 1,
                 ...req.body,
-                image: req.file.filename
+                image: req.file.filename,
+                user_id : req.session.userId
             }
 
             writeDB([...oldProducts,newProduct]);

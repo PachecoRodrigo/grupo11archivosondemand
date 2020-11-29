@@ -7,7 +7,6 @@
     "price": 2309,
     "image": "picture1.jpg"
   },
-
   {
     "idProduct": 101,
     "category": "image",
@@ -16,7 +15,6 @@
     "price": 2309,
     "image": "picture2.jpg"
   },
-
   {
     "idProduct": 102,
     "category": "image",
@@ -25,7 +23,6 @@
     "price": 2309,
     "image": "picture3.png"
   },
-
   {
     "idProduct": 103,
     "category": "image",
@@ -33,5 +30,38 @@
     "description": "pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel,",
     "price": 2309,
     "image": "picture4.jpg"
+  },
+  {
+    "idProduct": 104,
+    "title": "Prueba",
+    "price": "1500",
+    "category": "audio",
+    "description": "funciona?",
+    "image": "product_img-1606607599289.png"
+  },
+  {
+    "idProduct": 105,
+    "title": "fsdfdsf",
+    "price": "43",
+    "category": "audio",
+    "description": "fdsafdsafdsa",
+    "image": "product_img-1606607698936.png"
+  },
+  {
+    "idProduct": 106,
+    "title": "prueba",
+    "price": "1500",
+    "category": "image",
+    "description": "fdsafsdafsd",
+    "image": "product_img-1606607874548.png"
+  },
+  {
+    "idProduct": 107,
+    "title": "Iphone",
+    "price": "1500",
+    "category": "image",
+    "description": "Pruebaaaaa",
+    "image": "product_img-1606608348139.png",
+    "user_id": 1
   }
 ]
