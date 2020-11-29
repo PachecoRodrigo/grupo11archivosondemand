@@ -33,7 +33,7 @@
                 <div class="grid_create_form">
                 <div class="input_box">
                     <label for="" class="label_decoration">Nombre del producto:</label>
-                    <input type="text" name="title" id="title" <% if (typeof(old) != 'undefined') { %> value= <%= old.name %> <%} %>>
+                    <input type="text" name="title" id="title" <% if (typeof(old) != 'undefined') { %> value= <%= old.title %> <%} %>>
                 </div>
 
                 <div class="input_box">
@@ -42,30 +42,33 @@
                 </div>
                     
                 <div class="input_box">
-                    <label for="" class="label_decoration">Categoria:</label>
-                    <select name="category" id="category" class="">
+                    <label for="category_id" class="label_decoration">Categoria:</label>
+                    <select name="category_id" id="category_id" class="">
 
                         <% if (typeof(old) == 'undefined') { %> 
 
+
+
                         <option value="default" selected disabled>Seleccione una categoria</option>
-                        <option value="audio">Audio</option> 
-                        <option value="image">Imagen</option>
-                        <option value="writing">Escritura</option>
-                        <option value="design">Diseño</option>
+
+                        <% categories.forEach(category => { %>
+                         
+                        <option value="<%= category.id%>"><%= category.name%></option> 
+
+                        <% }) %>
 
 
 
                         <% } else{
-                            let category = old.category
+                            let selectedCategory = old.category_id 
                             %>
 
-                            <option value="default" <% if (category == 'audio') { %> <%= 'selected' %> <% } %>disabled>Seleccione una categoria</option>
-                            <option value="audio" <% if (category == 'audio') { %> <%= 'selected' %> <% } %>>Audio</option> 
-                            <option value="image" <% if (category == 'image') { %> <%= 'selected' %> <% } %>>Imagen</option>
-                            <option value="writing" <% if (category == 'writing') { %> <%= 'selected' %> <% } %>>Escritura</option>
-                            <option value="design" <% if (category == 'design') { %> <%= 'selected' %> <% } %>>Diseño</option>
+                            <option value="default" <% if (selectedCategory == 'default') { %> <%= 'selected' %> <% } %>disabled>Seleccione una categoria</option>
 
-                             
+                            <% categories.forEach(category => { %>
+                                <option value="<%= category.id %>" <% if (selectedCategory == category.id) { %> <%= 'selected' %> <% } %>><%=category.name%></option>
+                                
+                            <% }) %>
                         <% } %>
                     </select>
                 </div>

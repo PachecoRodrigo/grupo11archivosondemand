@@ -20,11 +20,11 @@
     
         <section class="grid-container">
             <% products.forEach(product => { %>
-                <a href="products/detail/<%= product.idProduct %>">
+                <a href="products/detail/<%= product.id %>">
                     <article>
                         <img id="myImg" src="/img/products/<%= product.image %>" class="imgproduct" alt="Image">
                         <h3><%= product.title %> </h3>
-                        <h4><%= product.price %> $</h4>
+                        <h4>$<%= product.price %></h4>
                     </article>
                 </a>
                 

@@ -14,8 +14,15 @@ let writeDB = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(pr
 
 
 module.exports = {
-    index: (req, res, next) => {
-        res.render('allProducts', { products: readDB() });
+    index: async (req, res, next) => {
+        try{
+            // res.render('allProducts', { products: readDB() });
+            let products = await db.Product.findAll();
+            res.render('allProducts', { products: products});
+        }catch(error){
+            res.send(error);
+        }
+        
       },
  
     detail: async (req,res)=>{
@@ -32,78 +39,96 @@ module.exports = {
         }
 
         },
-    create: (req,res)=>{
+    create: async (req,res)=>{
         if(req.session.email){
-            return res.render('create-form');
+            try{
+                let categories = await db.Category.findAll();
+                return res.render('create-form',{categories:categories});
+            }catch(error){
+                res.send(error);
+            }
         }else{
             return res.redirect('/users/login');
         }
 
     },
-    edit: (req,res)=>{
+    edit: async (req,res)=>{
         let id = (req.params.idProduct);
-        let products = readDB();       
-        let product = products.find(function(element){
-            return element.idProduct == id;
-        });
-        res.render('edit-form',{ product });
+        try{
+        product = await db.Product.findByPk(id)
+        categories = await db.Category.findAll();
+        res.render('edit-form',{ product, categories });
+        }catch(error){
+            res.send(error);
+        }
     },
 
-    update: (req,res) =>{
+    update: async (req,res) =>{
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
             let old = {
                 ...req.body,
-                idProduct: req.params.idProduct
+                id: req.params.idProduct
             }
 
             return res.render('edit-form', {errors: errors.array(), product: old})
         }else{
-            let products = readDB();
-            let product = products.find(function(element){
-                return element.idProduct == req.params.idProduct;
-            });
             let editedProduct = {
-                idProduct: product.idProduct,
                 ...req.body,
                 image: req.file.filename,
             }
 
-            products[products.indexOf(product)] = editedProduct
-
-            writeDB(products);
+            try{
+                await db.Product.update(editedProduct,{where:{id: req.params.idProduct}})
+            }catch(error){
+                res.send(error);
+            }
 
             res.redirect('/products/detail/' + req.params.idProduct);
         }
     },
 
-    destroy: (req,res)=> {
+    destroy: async (req,res)=> {
 
-        products= products.filter(producto => producto.idProduct != req.params.idProduct)
+        try{
+            await db.Product.destroy({
+                where: {id: req.params.idProduct}
+            });
+            res.redirect('/products');
+            
+        }catch(error){
+            res.send(error);
+        }
 
-		let baseActualizada = JSON.stringify(products, null, 2);
-		fs.writeFileSync (productsFilePath, baseActualizada);
-
-        res.redirect('/products')
+        
     },
 
-    store: (req,res)=>{
+    store: async (req,res)=>{
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
-            return res.render('create-form', {errors: errors.array(), old: req.body})
-        }else{
-            let oldProducts = readDB();
-            let newProduct = {
-                ...req.body,
-                image: req.file.filename,
-                user_id : req.session.userId
+            try{
+            let categories = await db.Category.findAll();
+            return res.render('create-form', {  errors: errors.array(), 
+                                                old: req.body,
+                                                categories: categories,
+                                                })
+            }catch(error){
+                res.send(error);
             }
-
-            writeDB([...oldProducts,newProduct]);
-
+        }else{
+            try{
+                await db.Product.create({
+                    ...req.body,
+                    image: req.file.filename,
+                    created_user_id : req.session.userId
+                });
             res.redirect('/products');
+            }catch(error){
+                res.send(error);
+            }
+            
         }
     }
 }

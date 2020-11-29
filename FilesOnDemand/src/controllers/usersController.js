@@ -55,6 +55,7 @@ module.exports = {
     
             if(req.body.rememberMe){
               res.cookie('rememberMe', userLogin.email, {maxAge: 1000*60*1*24*30} );
+              res.cookie('userId', userLogin.id, {maxAge: 1000*60*1*24*30} );
             }
     
             res.redirect('/');

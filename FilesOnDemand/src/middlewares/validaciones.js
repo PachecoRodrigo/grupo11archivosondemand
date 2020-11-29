@@ -62,7 +62,7 @@ module.exports = {
         .notEmpty()
         .withMessage("El campo de descripcion no puede estar vacio"),
 
-        body('category')
+        body('category_id')
         .notEmpty()
         .withMessage("Seleccione una categoria"),
 
