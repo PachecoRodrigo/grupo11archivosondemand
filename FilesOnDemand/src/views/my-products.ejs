@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | FOD</title>
+    <link rel="stylesheet" href="\styles\styleheader.css">
+    <link rel="stylesheet" href="/styles/all-products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <!-- header -->
+    <%- include('partials/header') %>
+    <!--fin del header -->
+
+<!--inicio todos los producto -->
+
+<h1>Todos tus productos</h1>
+    
+        <section class="grid-container">
+            <% products.forEach(product => { %>
+                <article>
+                <a href="/products/detail/<%= product.id %>">
+                        <img id="myImg" src="/img/products/<%= product.image %>" class="imgproduct" alt="Image">
+                        <h3><%= product.title %> </h3>
+                        <h4>$<%= product.price %></h4>
+                        <button class="button-decoration"><a href="/products/edit/<%= product.id %>">Editar</a></button>
+
+                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                            <button class="button-decoration">Eliminar</a></button>
+                        </form>
+                    </a>
+                    </article>
+
+                
+                <% }) %>    
+                
+            </section>
+            
+ 
+<!--fin todos los producto -->
+
+     <!-- footer -->    
+     <%- include('partials/footer') %>
+     <!-- fin del footer --> 
+</body>
+<script src="js/detalle.js"></script>
+</html>

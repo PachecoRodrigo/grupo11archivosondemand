@@ -2,15 +2,17 @@ const { body, validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 
-let getDB = () => {
-    let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data', 'usersDB.json')))
-    return usuarios
-}
+//Configuracion de sequelize
+const db = require(path.join('..','db','models'));
+const { Op, where } = require("sequelize");
+
 module.exports = {
     register: [
-        body('email').custom((value,{req}) =>{
-            if (getDB().find(element => element.email == req.body.email) !== undefined) {
-                throw new Error('El correo ingresado ya se encuentra registrado');
+        body('email').custom(async (value) => {
+
+            let user = (await db.User.findOne({where: {email: value}}))
+            if (user != null) {
+                throw new Error('El email ingresado ya se encuentra registrado');
               }
               return true;
         }),

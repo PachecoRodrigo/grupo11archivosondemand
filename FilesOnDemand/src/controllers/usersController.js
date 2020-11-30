@@ -73,8 +73,22 @@ module.exports = {
     logout: (req,res)=>{
       req.session.destroy();
       res.clearCookie('rememberMe');
+      res.clearCookie('userId');
 
       res.redirect('/');
+    },
+
+    myproducts: async (req,res) =>{
+      if(req.session.userId){
+        try{
+          let products = await db.Product.findAll({where:{created_user_id: req.session.userId}})
+          res.render('my-products',{products})
+        }catch(error){
+          res.send(error);
+        }
+      }else{
+        return res.redirect('/users/login');
+      }
     }
     
 }

@@ -5,18 +5,9 @@ const { body, validationResult } = require('express-validator');
 const db = require(path.join('..','db','models'));
 const { Op, where } = require("sequelize");
 
-// LEENDO LOS DATOS DE LOS PRODUCTOS JSON
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-
-let readDB = () => JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-let writeDB = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
-
-
-
 module.exports = {
     index: async (req, res, next) => {
         try{
-            // res.render('allProducts', { products: readDB() });
             let products = await db.Product.findAll();
             res.render('allProducts', { products: products});
         }catch(error){
@@ -95,7 +86,7 @@ module.exports = {
             await db.Product.destroy({
                 where: {id: req.params.idProduct}
             });
-            res.redirect('/products');
+            res.redirect('/users/myproducts');
             
         }catch(error){
             res.send(error);

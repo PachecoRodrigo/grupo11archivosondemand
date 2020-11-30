@@ -8,6 +8,7 @@ var usersController = require(path.join(__dirname,'..','controllers','usersContr
 /* GET users listing. */
 router.get('/login', usersController.login)
 router.get('/register', usersController.register)
+router.get('/myproducts',usersController.myproducts)
 
 /*POST users listing */
 router.post('/register',validations.register,usersController.processRegister);
