@@ -16,20 +16,29 @@
 
 <!--inicio todos los producto -->
 
-<h1>Todos tus productos</h1>
+
+<% if (products.length == 0 ) { %>
+    <h1>Todavia no publicaste ningun producto</h1>
+   <% }else{ %>
+    <h1>Todos tus productos</h1>
+   <% }%>
     
         <section class="grid-container">
+
             <% products.forEach(product => { %>
                 <article>
                 <a href="/products/detail/<%= product.id %>">
                         <img id="myImg" src="/img/products/<%= product.image %>" class="imgproduct" alt="Image">
                         <h3><%= product.title %> </h3>
                         <h4>$<%= product.price %></h4>
+
+                        <div class="update-buttons">
                         <button class="button-decoration"><a href="/products/edit/<%= product.id %>">Editar</a></button>
 
                         <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                             <button class="button-decoration">Eliminar</a></button>
                         </form>
+                        </div>
                     </a>
                     </article>
 

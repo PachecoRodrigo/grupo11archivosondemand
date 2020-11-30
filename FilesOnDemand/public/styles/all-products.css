@@ -38,8 +38,13 @@ h1  {
     object-fit: cover;
 }
 
+.update-buttons{
+    display: flex;
+}
+
 .button-decoration{
     margin-bottom: 10px;
+    margin-right: 10px;
 	background-color: yellow;
 	border-radius: 10em;
 	border: none;
