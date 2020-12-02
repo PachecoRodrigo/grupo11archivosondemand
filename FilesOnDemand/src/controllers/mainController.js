@@ -1,10 +1,17 @@
-const {Product, Category, User} = require("../db/models")
-const {Op} = require('sequelize'); 
+const path = require('path');
+const { body, validationResult } = require('express-validator');
 
+const db = require(path.join('..','db','models'));
+const { Op, where } = require("sequelize");
 
 module.exports = {
-    index: function(req, res, next) {
-        res.render('index');
+    index: async function(req, res, next) {
+        try{
+        let categories = await db.Category.findAll();
+        res.render('index',{categories});
+        }catch(error){
+            res.send(error);
+        }
       },
 
     test: async (req, res)=> {

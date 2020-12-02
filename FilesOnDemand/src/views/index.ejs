@@ -19,10 +19,11 @@
             
             <select name="categories" id="categories" >
                 <option selected value="title" disabled> Tipo de Archivo </option>
-                    <option value="1" >Audio</option> 
-                    <option value="2" >Imagen</option> 
-                    <option value="3">Escritura</option> 
-                    <option value="4">Diseño</option> 
+
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>" ><%= category.name %></option> 
+                <% }) %>
+
             </select>                         
             <button type="submit" class= "submit" ><i>Buscar</i></button>
             
