@@ -38,6 +38,11 @@ router.get('/create-form', productsController.create);
 router.get('/edit-form/:idProduct', productsController.edit);
 router.get('/create',productsController.create);
 router.get('/edit/:idProduct',productsController.edit);
+router.post('/search', productsController.search);
+router.get('/audio', productsController.audio);
+router.get('/image', productsController.image);
+router.get('/writing', productsController.writing);
+router.get('/design', productsController.design);
 
 //POST routes
 router.post('/create',upload.single('product_img'),validations.product ,productsController.store);

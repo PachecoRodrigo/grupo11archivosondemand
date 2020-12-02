@@ -17,35 +17,17 @@
         <form action="/products/search" method="POST" class="busqueda">
             <input  class= "busqueda" type="text" name="products" placeholder="¿Que estas buscando?">
             
-            <select name="categories" id="categories" onchange="getSelectValue();">
+            <select name="categories" id="categories" >
                 <option selected value="title" disabled> Tipo de Archivo </option>
-                    <option value="imagen" >Imagen</option> 
-                    <option value="audio" >Audio</option> 
-                    <option value="escritura">Escritura</option> 
-                    <option value="diseño">Diseño</option> 
+                    <option value="1" >Audio</option> 
+                    <option value="2" >Imagen</option> 
+                    <option value="3">Escritura</option> 
+                    <option value="4">Diseño</option> 
             </select>                         
             <button type="submit" class= "submit" ><i>Buscar</i></button>
-            <script>
-        
-                function getSelectValue(){ 
-                    var selectedValue = document.getElementById("orden").value;
-                }
-                getSelectValue();
-        
-            </script>
+            
             </form>
-        <!--<form class="barras">        
-            <input type="search" placeholder="Busca canciones, sonidos o efectos">
-        </form>	
-        <form class="barras">
-            <input class="imagenes" type="search" placeholder="Busca imagenes, caricaturas o fotografias">
-        </form>	
-        <form class="barras">
-            <input class="escritura" type="search" placeholder="Busca libros, articulos o frases">
-        </form>	
-        <form class="barras">
-            <input class="disenio" type="search" placeholder="Busca 3D, planos o maquetas">
-        </form>	-->
+       
     </section>
     <h3 class= destacados>Archivos Destacados</h3>
     <section class= "productos__destacados">
@@ -79,13 +61,13 @@
         </article>
         </section>
         <section class= "busca__categorias">
-            <a href="" class="carpetas__categorias">AUDIO
+            <a href="products/audio" class="carpetas__categorias">AUDIO
             </a>
-            <a href="" class="carpetas__categorias">IMAGEN
+            <a href="products/image" class="carpetas__categorias">IMAGEN
             </a>
-            <a href="" class="carpetas__categorias">ESCRITURA
+            <a href="products/writing" class="carpetas__categorias">ESCRITURA
             </a>
-            <a href="" class="carpetas__categorias">DISEÑO
+            <a href="products/design" class="carpetas__categorias">DISEÑO
             </a>
         </section>
         <section class="publicar__arch">

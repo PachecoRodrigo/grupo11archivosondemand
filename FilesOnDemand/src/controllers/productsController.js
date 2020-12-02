@@ -121,5 +121,85 @@ module.exports = {
             }
             
         }
-    }
+    },
+
+    search: async (req, res) => {
+        try {
+            let produBuscado = req.body.products;
+            let categories = req.body.categories;        
+            let products = await db.Product.findAll({                  
+            
+               where: {
+                 
+                   [Op.and]: [
+                    {
+                        title: { [Op.like] : "%" + produBuscado +"%" }
+                    },
+                    {
+                      category_id: {
+                        [Op.like] : categories
+                      }
+                    }
+                  ]
+                }
+                                               
+            })
+            console.log(req.body)             
+            res.render("searchProducts",{products: products, categories})        
+            }catch(error){
+                console.log(error)
+            }
+        } ,
+        audio: async (req, res, next) => {
+            try{
+                let products = await db.Product.findAll({
+                    where: {
+                        category_id: '1'
+                    }
+                });
+                res.render('audioProducts', { products: products});
+            }catch(error){
+                res.send(error);
+            }
+            
+          }, 
+          image: async (req, res, next) => {
+            try{
+                let products = await db.Product.findAll({
+                    where: {
+                        category_id: '2'
+                    }
+                });
+                res.render('imagenProducts', { products: products});
+            }catch(error){
+                res.send(error);
+            }
+            
+          }, 
+          writing: async (req, res, next) => {
+            try{
+                let products = await db.Product.findAll({
+                    where: {
+                        category_id: '3'
+                    }
+                });
+                res.render('escrituraProducts', { products: products});
+            }catch(error){
+                res.send(error);
+            }
+            
+          }, 
+          design: async (req, res, next) => {
+            try{
+                let products = await db.Product.findAll({
+                    where: {
+                        category_id: '4'
+                    }
+                });
+                res.render('designProducts', { products: products});
+            }catch(error){
+                res.send(error);
+            }
+            
+          }, 
 }
