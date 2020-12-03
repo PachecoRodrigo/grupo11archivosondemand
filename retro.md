@@ -20,3 +20,18 @@ Cosas para hacer en el 3 sprint:
 seguir con la organizacion como se viene planteando
 aprovechar el tiempo de grupo en clase tambien para repasar y actualizar contenidos.
 
+Conclusiones SPRINT 3: 
+
+sprint sin mayor complicacion, la division de tareas fue correcta y se termino a timpo con todo.
+
+Conclusiones SPRINT 4: 
+
+el sprint 4 resulto mas sencillo ya que varias tareas se implementaron en sumultaneo con el sprint 3. 
+
+cosas para hacer en el sprint 5: 
+mejorar la comunicacion a la hora de subir los cambios al repositorio.
+realizar todo el equipo junto una demo para chequear que todo este funcionando y prevenir errores antes de la entrega. 
+
+
+
+
