@@ -154,7 +154,7 @@ module.exports = {
             try{
                 let products = await db.Product.findAll({
                     where: {
-                        category_id: '1'
+                        category_id: '2'
                     }
                 });
                 res.render('audioProducts', { products: products});
@@ -167,7 +167,7 @@ module.exports = {
             try{
                 let products = await db.Product.findAll({
                     where: {
-                        category_id: '2'
+                        category_id: '1'
                     }
                 });
                 res.render('imagenProducts', { products: products});
