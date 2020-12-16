@@ -45,12 +45,21 @@ module.exports = {
     },
     edit: async (req,res)=>{
         let id = (req.params.idProduct);
-        try{
-        product = await db.Product.findByPk(id)
-        categories = await db.Category.findAll();
-        res.render('edit-form',{ product, categories });
-        }catch(error){
-            res.send(error);
+
+        if(req.session.email){
+                try{
+                product = await db.Product.findByPk(id)
+                if (product.created_user_id == req.session.userId){
+                categories = await db.Category.findAll();
+                res.render('edit-form',{ product, categories });
+                }else{
+                    res.redirect('/products/detail/'+id);
+                }
+                }catch(error){
+                    res.send(error);
+                }
+        }else{
+            return res.redirect('/users/login');
         }
     },
 
