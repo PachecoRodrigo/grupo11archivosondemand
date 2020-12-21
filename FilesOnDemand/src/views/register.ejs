@@ -30,7 +30,7 @@
             </div>
 
                 
-            <form method="POST" class = "input-fields"action="/users/register">
+            <form method="POST" class = "input-fields"action="/users/register" enctype="multipart/form-data">
 
                 <div class="error_messages">
                     <% if (typeof(errors) != 'undefined') { %>
@@ -48,6 +48,11 @@
                     <input class="input-decoration" type="email" placeholder="E-mail" name="email" <% if (typeof(old) != 'undefined') { %> value= <%= old.email %> <%} %>>
                     <input class="input-decoration" type="password" placeholder="Contraseña" name="password" <% if (typeof(old) != 'undefined') { %> value= <%= old.password %> <%} %>>
                     <input class="input-decoration" type="password" placeholder="Confirmar contraseña" name="passwordCheck" <% if (typeof(old) != 'undefined') { %> value= <%= old.passwordCheck %> <%} %>>
+                    
+                    <div class= "avatar">
+                        <label for="" class="label_decoration">Avatar:</label>
+                        <input class="img_field" type="file" name="user_img" id="" enctype="multipart/form-data">
+                    </div>
                     <button type="submit" class="submit-button">Registrarse</button>
                 
             </form>

@@ -3,7 +3,10 @@
     <a href="/" class="pagina__inicio">
         <img src="\img\logoFOD.png" alt="logo" class= "logo">
     </a>      
-    <h1 class="lema">Facilitamos el intercambio de arte digital</h1>      
+    <h1 class="lema">Facilitamos el intercambio de arte digital</h1>  
+
+       
+
     <!--<a href="/products" class= "archivos" id="todosArchivos"><i class='archivos'></i> Todos los archivos</a>-->
     <nav class="main-nav">
         <a href="/products" style="color: yellow; font-weight: bold;" class= "link" ><i class='archivos'></i>ARCHIVOS</a>
@@ -11,10 +14,19 @@
             <a href="/users/register" class= "link"><i class='fas fa-plus-circle'></i> CREAR CUENTA</a>
             <a href="/users/login" class= "link"><i class='fas fa-user-circle'></i> INICIAR SESIÓN</a>
         <% } %>
-
+        
         <% if (email) { %>
             <a href="/users/myproducts" style="color: orange; font-weight: bold;" class= "link" ><i class='archivos'></i>MIS ARCHIVOS</a>
             <span href="/users/myproducts" class= "link"> <%= email %> </span>
+                <% if (image) { %>
+                    <img src="/img/users/<%= image %>" alt="Avatar" class= "avatar_img">
+                <% } %>
+
+                <% if (!image) { %>
+                    <img src="/img/users/alien.jpg" alt="Avatar" class= "avatar_img">
+                <% } %>
+
+            
             <form action="/users/logout" method="POST" id="logout">
                 <button type="submit" class= "link logout_button"><i class="fas fa-sign-out-alt"></i></button> 
             </form>

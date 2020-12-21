@@ -16,6 +16,7 @@ module.exports = {
       res.render('register');
     },
     processRegister:async (req,res,next)=>{
+      
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
@@ -27,10 +28,12 @@ module.exports = {
           first_name: req.body.first_name,
           last_name: req.body.last_name,
           email: req.body.email,
-          password: bcrypt.hashSync(req.body.password, 10)
+          password: bcrypt.hashSync(req.body.password, 10),
+          image: req.file.filename
         });
       }catch(error){
         res.send(error)
+        console.log(error)
       }
       return res.redirect('/users/login');
     },
@@ -52,6 +55,7 @@ module.exports = {
           if(bcrypt.compareSync(req.body.password, userLogin.password)){
             req.session.email = userLogin.email;
             req.session.userId = userLogin.id;
+            req.session.image = userLogin.image;
     
             if(req.body.rememberMe){
               res.cookie('rememberMe', userLogin.email, {maxAge: 1000*60*1*24*30} );

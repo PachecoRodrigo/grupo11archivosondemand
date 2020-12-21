@@ -5,6 +5,7 @@ module.exports = (sequelize, dataTypes) =>{
         last_name: dataTypes.STRING,
         email: dataTypes.STRING,
         password: dataTypes.STRING,
+        image: dataTypes.STRING,
     },{
         underscored: true,
         timestamps: true

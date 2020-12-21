@@ -7,7 +7,7 @@ const { Op, where } = require("sequelize");
 module.exports = {
     index: async function(req, res, next) {
         try{
-        let categories = await db.Category.findAll();
+        let categories = await db.Category.findAll();        
         res.render('index',{categories});
         }catch(error){
             res.send(error);
