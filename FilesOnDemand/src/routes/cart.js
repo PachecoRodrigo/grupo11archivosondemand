@@ -5,5 +5,9 @@ var cartController = require(path.join(__dirname,'..','controllers','cartControl
 
 /* GET home page. */
 router.get('/', cartController.index);
+router.get('/add', cartController.add);
+router.get('/delete', cartController.add);
+router.get('/items', cartController.items);
+
 
 module.exports = router;

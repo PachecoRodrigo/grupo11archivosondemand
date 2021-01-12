@@ -16,7 +16,6 @@ const Product = sequelize.define('Product', {
 
 Product.associate = (models =>{
     Product.belongsTo(models.Category);
-    /*Product.belongsTo(models.user);*/
     Product.belongsToMany(models.User,{
         as: 'users',
         through: 'users_products'

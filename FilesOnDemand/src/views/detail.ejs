@@ -46,9 +46,11 @@
                     
                     <div class="product-options">
                     
+                        <form action="/cart/add" method="get">
                         <div class="add-chart">
-                            <button class="button-chart"><a href="/cart">Agregar</a></button>
+                            <button class="button-chart" type="submit" value="<%= oneproduct.id %>" name="productId">Agregar</button>
                         </div>
+                        </form>
                     
                         <div class="product-price">
                             <h2><%= oneproduct.price %></h2>

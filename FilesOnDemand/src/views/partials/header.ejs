@@ -18,11 +18,11 @@
         <% if (email) { %>
             <a href="/users/myproducts" style="color: orange; font-weight: bold;" class= "link" ><i class='archivos'></i>MIS ARCHIVOS</a>
             <span href="/users/myproducts" class= "link"> <%= email %> </span>
-                <% if (image) { %>
+                <% if (typeof image != 'undefined') { %>
                     <img src="/img/users/<%= image %>" alt="Avatar" class= "avatar_img">
                 <% } %>
 
-                <% if (!image) { %>
+                <% if (typeof image == 'undefined') { %>
                     <img src="/img/users/alien.jpg" alt="Avatar" class= "avatar_img">
                 <% } %>
 

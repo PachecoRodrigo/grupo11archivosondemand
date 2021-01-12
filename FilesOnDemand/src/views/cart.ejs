@@ -14,132 +14,41 @@
     
     <section class="carrito-section">
 
-
+        <% if (typeof items != 'undefined') { %>
+         
+        
+        <% let total = 0; %> 
+        <% for( let index = 0; index < items.length; index++ ) { %>
+            <% total = total + items[index].price %> 
         <article class="cart_item">
 
             <div class="product_img">
-                <img src="/img/products/produaudio.png" alt="audio">
+                <img src="/img/products/<%= items[index].Product.image%>" alt="audio">
             </div>
 
             <div class="product_title">
-                <span>Cancion Rock</span>
+                <span><%= items[index].Product.title%></span>
             </div>
 
             <div class="product_price">
-                <div>
-                <span>Cantidad:</span>
-                <select name="" id="">
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                    <option value="">5</option>
-                </select>
-                </div>
-
-                <span>$250</span>
-
-
+                <span>$<%= items[index].price%></span>
             </div>
 
             <button class="delete-button">Eliminar</button>
 
         </article>
 
-        <article class="cart_item">
-
-            <div class="product_img">
-                <img src="/img/products/produlibro.png" alt="audio">
-            </div>
-
-            <div class="product_title">
-                <span>Libro Ballenas</span>
-            </div>
-
-            <div class="product_price">
-                <div>
-                    <span>Cantidad:</span>
-                    <select name="" id="">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                    </select>
-                </div>
-
-                <span>$250</span>
-            </div>
-
-            <button class="delete-button">Eliminar</button>
-
-        </article>
-
-        <article class="cart_item">
-
-            <div class="product_img">
-                <img src="/img/products/produimagen.png" alt="audio">
-            </div>
-
-            <div class="product_title">
-                <span>Poster Sunset</span>
-            </div>
-
-            <div class="product_price">
-                <div>
-                    <span>Cantidad:</span>
-                    <select name="" id="">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                    </select>
-                </div>
-
-                <span>$250</span>
-            </div>
-
-            <button class="delete-button">Eliminar</button>
-
-        </article>
-
-        <article class="cart_item">
-
-            <div class="product_img">
-                <img src="/img/products/produlibro.png" alt="audio">
-            </div>
-
-            <div class="product_title">
-                <span>Libro Ballenas</span>
-            </div>
-
-            <div class="product_price">
-                <div>
-                    <span>Cantidad:</span>
-                    <select name="" id="">
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                    </select>
-                </div>
-
-                <span>$250</span>
-            </div>
-
-            <button class="delete-button">Eliminar</button>
-
-        </article>
+        <% } %>
 
         <div class="total_div">
-           TOTAL:$1000
+           TOTAL:$<%= total %>
         </div>
 
         <button class="buy-button">
             COMPRAR
         </button>
+
+        <% } %>
 
 
 
