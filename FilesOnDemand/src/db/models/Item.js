@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) =>{
         price: dataTypes.INTEGER,
         user_id: dataTypes.INTEGER,
         product_id: dataTypes.INTEGER,
-        cart_id: dataTypes.INTEGER,
+        order_id: dataTypes.INTEGER,
         state: dataTypes.INTEGER,
     },{
         underscored: true,

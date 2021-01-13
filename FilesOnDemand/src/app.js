@@ -10,7 +10,9 @@ var validator = require('express-validator');
 var methodOverride = require('method-override');
 var session = require('express-session');
 
+
 var log = require(path.join(__dirname, 'middlewares', 'log.js'));
+
 
 
 

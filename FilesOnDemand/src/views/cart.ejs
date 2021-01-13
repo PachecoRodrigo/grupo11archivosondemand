@@ -34,7 +34,10 @@
                 <span>$<%= items[index].price%></span>
             </div>
 
-            <button class="delete-button">Eliminar</button>
+            <form method="POST" action="/cart/delete/<%= items[index].product_id%>?_method=DELETE">
+                <button class="delete-button">Eliminar</button>
+            </form>
+
 
         </article>
 
@@ -43,10 +46,12 @@
         <div class="total_div">
            TOTAL:$<%= total %>
         </div>
-
-        <button class="buy-button">
+        
+        <form action="/cart/order" method="POST">
+        <button class="buy-button" type="submit">
             COMPRAR
         </button>
+        </form>
 
         <% } %>
 

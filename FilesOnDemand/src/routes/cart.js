@@ -2,12 +2,17 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var cartController = require(path.join(__dirname,'..','controllers','cartController'));
+var isLogged = require(path.join(__dirname,'..' ,'middlewares', 'isLogged.js'));
 
 /* GET home page. */
-router.get('/', cartController.index);
-router.get('/add', cartController.add);
-router.get('/delete', cartController.add);
+router.get('/', isLogged,cartController.index);
+router.get('/add',isLogged ,cartController.add);
+
 router.get('/items', cartController.items);
+router.post('/order', isLogged,cartController.order);
+
+
+router.delete('/delete/:idProduct',isLogged,cartController.delete);
 
 
 module.exports = router;

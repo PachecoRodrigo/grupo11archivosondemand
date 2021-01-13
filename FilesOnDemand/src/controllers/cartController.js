@@ -3,7 +3,6 @@ const db = require(path.join('..','db','models'));
 
 module.exports = {
     index: async function(req, res) {
-        if(req.session.email){
 
           try{
 
@@ -20,17 +19,10 @@ module.exports = {
             res.send(e)
           }
 
-
-
-
-        }else{
-          res.redirect('/users/login')
-        }
         
       },
 
       add: async function(req,res){
-        if(req.session.email){
           try{
 
             let inCart = await db.Item.findOne({where:
@@ -45,11 +37,9 @@ module.exports = {
               price: product.price,
               user_id: req.session.userId,
               product_id:req.query.productId,
-              cart_id:null,
+              order_id:null,
               state:1
             })
-
-
           }
 
           res.redirect('/products');
@@ -57,9 +47,50 @@ module.exports = {
           }catch(error){
             res.send(error);
           }
-          
-        }else{
-          res.redirect('/users/login')
+      },
+
+      delete: async function(req,res){
+        try{
+          await db.Item.destroy({
+            where: {
+              product_id: req.params.idProduct,
+              user_id: req.session.userId
+            }
+          });
+        }catch(error){
+          res.send(error);
+        }
+
+        res.redirect('/cart');
+      },
+
+      order: async function (req,res){
+        try{
+          let items = await db.Item.findAll({
+            where: {
+                user_id : req.session.userId,
+                state:1
+            },
+            include: {all:true}
+          });
+
+          //Calculate the total of the order
+          let total = 0;
+          items.forEach(element => {
+            total += element.price;
+          });
+
+          let order = await db.Order.create({
+            total: total,
+            user_id: req.session.userId,
+          })
+
+          await db.Item.update({order_id: order.id, state:0},{where:{user_id:req.session.userId, state:1}});
+
+          res.send('Compraste con exito!')
+
+        }catch(e){
+          res.send(e);
         }
       },
 
