@@ -1,0 +1,19 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1,p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.success_img{
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 200px;;
+    height: 200px;
+}

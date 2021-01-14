@@ -26,12 +26,20 @@
                     <img src="/img/users/alien.jpg" alt="Avatar" class= "avatar_img">
                 <% } %>
 
-            
-            <form action="/users/logout" method="POST" id="logout">
-                <button type="submit" class= "link logout_button"><i class="fas fa-sign-out-alt"></i></button> 
-            </form>
+                <form action="/users/logout" method="POST" id="logout">
+                    <button type="submit" class= "link logout_button"><i class="fas fa-sign-out-alt"></i></button> 
+                </form>
+
+                
+                <a href="/cart"class="link"><i class='fas fa-shopping-cart'></i></a>
+                <% if (typeof cartCount != 'undefined') { %>
+                    <a href="/cart"class="cartCounter"><span href="/users/myproducts" class= "link"> <%= cartCount %> </span></a>
+
+                <% } %>
+
         <% } %>
-        <a href="/cart"class="link"><i class='fas fa-shopping-cart'></i></a>
+        
+
     </nav>
 </header>
 <!--fin del header -->

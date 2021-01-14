@@ -31,36 +31,27 @@ module.exports = {
 
         },
     create: async (req,res)=>{
-        if(req.session.email){
             try{
                 let categories = await db.Category.findAll();
                 return res.render('create-form',{categories:categories});
             }catch(error){
                 res.send(error);
             }
-        }else{
-            return res.redirect('/users/login');
-        }
 
     },
     edit: async (req,res)=>{
         let id = (req.params.idProduct);
-
-        if(req.session.email){
                 try{
-                product = await db.Product.findByPk(id)
-                if (product.created_user_id == req.session.userId){
-                categories = await db.Category.findAll();
-                res.render('edit-form',{ product, categories });
+                    product = await db.Product.findByPk(id)
+                    if (product.created_user_id == req.session.userId){
+                    categories = await db.Category.findAll();
+                    res.render('edit-form',{ product, categories });
                 }else{
                     res.redirect('/products/detail/'+id);
                 }
                 }catch(error){
                     res.send(error);
                 }
-        }else{
-            return res.redirect('/users/login');
-        }
     },
 
     update: async (req,res) =>{
@@ -92,6 +83,11 @@ module.exports = {
     destroy: async (req,res)=> {
 
         try{
+            let items = await db.Item.destroy({
+                where: {
+                    product_id : req.params.idProduct,
+                }
+              });
             await db.Product.destroy({
                 where: {id: req.params.idProduct}
             });

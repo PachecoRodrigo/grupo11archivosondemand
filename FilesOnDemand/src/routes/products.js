@@ -4,6 +4,8 @@ var path = require('path');
 var multer  = require('multer');
 const validaciones = require('../middlewares/validaciones');
 var validations = require(path.join(__dirname,'..','middlewares','validaciones.js'));
+var isLogged = require(path.join(__dirname,'..' ,'middlewares', 'isLogged.js'));
+
 
 
 //Configuracion de multer
@@ -34,10 +36,9 @@ var productsController = require(path.join(__dirname,'..','controllers','product
 /* GET users listing. */
 router.get('/', productsController.index);
 router.get('/detail/:idProduct', productsController.detail);
-router.get('/create-form', productsController.create);
 router.get('/edit-form/:idProduct', productsController.edit);
-router.get('/create',productsController.create);
-router.get('/edit/:idProduct',productsController.edit);
+router.get('/create',isLogged,productsController.create);
+router.get('/edit/:idProduct',isLogged,productsController.edit);
 router.post('/search', productsController.search);
 router.get('/audio', productsController.audio);
 router.get('/image', productsController.image);

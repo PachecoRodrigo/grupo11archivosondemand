@@ -27,7 +27,9 @@ module.exports = {
 
             let inCart = await db.Item.findOne({where:
               {product_id:req.query.productId,
-              user_id: req.session.userId}})
+              user_id: req.session.userId,
+              state:1},
+              })
 
             if(!inCart){
 
@@ -74,31 +76,26 @@ module.exports = {
             include: {all:true}
           });
 
-          //Calculate the total of the order
-          let total = 0;
-          items.forEach(element => {
-            total += element.price;
-          });
+          if(items.length != 0){
 
-          let order = await db.Order.create({
-            total: total,
-            user_id: req.session.userId,
-          })
+            //Calculate the total of the order
+            let total = 0;
+            items.forEach(element => {
+              total += element.price;
+            });
 
-          await db.Item.update({order_id: order.id, state:0},{where:{user_id:req.session.userId, state:1}});
+            let order = await db.Order.create({
+              total: total,
+              user_id: req.session.userId,
+            })
 
-          res.send('Compraste con exito!')
+            await db.Item.update({order_id: order.id, state:0},{where:{user_id:req.session.userId, state:1}});
 
-        }catch(e){
-          res.send(e);
-        }
-      },
+            res.render('successOrder',{order})
+          }else{
+            res.redirect('/cart')
+          }
 
-      items: async function(req,res) {
-        try{
-          let items = await db.Item.findAll();
-
-          res.json(items);
         }catch(e){
           res.send(e);
         }

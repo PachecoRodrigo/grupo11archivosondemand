@@ -8,7 +8,7 @@ var isLogged = require(path.join(__dirname,'..' ,'middlewares', 'isLogged.js'));
 router.get('/', isLogged,cartController.index);
 router.get('/add',isLogged ,cartController.add);
 
-router.get('/items', cartController.items);
+
 router.post('/order', isLogged,cartController.order);
 
 
