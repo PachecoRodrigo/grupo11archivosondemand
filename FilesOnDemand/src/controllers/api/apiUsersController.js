@@ -6,7 +6,7 @@ module.exports = {
   allUsers: async (req, res, next) => {
     try{
       //Verificar el numero de puerto sea el correcto para que funcione el link
-      const sqlAll = 'SELECT id, first_name, email, concat("http://localhost:3000/api/users/", id) as detail FROM users'
+      const sqlAll = 'SELECT id, first_name, email, concat("http://localhost:5000/api/users/", id) as detail FROM users'
       let users = await sequelize.query(sqlAll);
       if(users[0].length>0){
         let respuesta = {
@@ -25,7 +25,7 @@ module.exports = {
   detailUsers:async (req, res, next) => {
     try{
       let id = (req.params.id);
-      const sqlOne = ('SELECT id, first_name, last_name, email, created_at, concat("http://localhost:3000/img/users/",image) as detail FROM users where id ='+id)
+      const sqlOne = ('SELECT id, first_name, last_name, email, created_at, concat("http://localhost:5000/img/users/",image) as detail FROM users where id ='+id)
       let oneUser = await sequelize.query(sqlOne);
       if(oneUser == null){
         res.send("404 not found")

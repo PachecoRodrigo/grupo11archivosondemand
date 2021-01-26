@@ -8,7 +8,7 @@ module.exports = {
     try{
       const sqlcount = 'SELECT categories.name, count(category_id) as total from products inner join categories on category_id = categories.id group by category_id order by categories.name'
       //Verificar el numero de puerto sea el correcto para que funcione el link
-      const sqlall = 'SELECT id, title, description, concat("http://localhost:3000/api/products/", id) as detalle FROM products'
+      const sqlall = 'SELECT id, title, description, concat("http://localhost:5000/api/products/", id) as detalle FROM products'
       let products = await sequelize.query(sqlall);
       let categories = await sequelize.query(sqlcount);
       if (products.length >0) {
@@ -32,7 +32,7 @@ module.exports = {
     try{
       let id = req.params.id;
       //Verificar el numero de puerto sea el correcto para que funcione el link
-      const sqlOne = 'SELECT id, title, price, description, created_at, concat("http://localhost:3000/img/products/",image) as detail, category_id FROM products where id ='+id;
+      const sqlOne = 'SELECT id, title, price, description, created_at, concat("http://localhost:5000/img/products/",image) as detail, category_id FROM products where id ='+id;
       let oneProduct = await sequelize.query(sqlOne);
       if(oneProduct == null){
         res.send("404 not found")
