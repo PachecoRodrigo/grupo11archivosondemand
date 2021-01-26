@@ -26,7 +26,16 @@ input.busqueda{
 	padding: 10px;
 	outline: none;
 	border: 0;
+	/*border: solid red;*/
 	border-radius: 5px;  
+	}
+	.error{
+		border: solid rgb(248, 206, 18);;
+	}
+	small{
+		margin-top:13px;
+		color: rgb(248, 206, 18);
+		margin-left: 5px;
 	}
 	button.submit {
 		position: relative;

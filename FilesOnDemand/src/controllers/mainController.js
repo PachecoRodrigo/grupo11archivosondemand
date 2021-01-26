@@ -22,5 +22,9 @@ module.exports = {
               console.log(error)
           }
       },
+
+      contacto:(req, res)=>{
+          res.render('contacto')
+      },
       
 }

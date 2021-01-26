@@ -10,6 +10,13 @@ const apiUsersController = require('../../controllers/api/apiUsersController')
 router.get('/products', apiProductsController.allProducts)
 //Detalle de cada producto
 router.get('/products/:id',apiProductsController.detailProducts);
+//todos los productos con precio sin categoria
+router.get('/productos', apiProductsController.index);
+//ultimo producto publicado
+router.get('/productos/ultimo', apiProductsController.last);
+//categorias individuales 
+router.get('/productos/categorias', apiProductsController.categories);
+
 
 /* API USERS */
 //Todos los usuarios

@@ -33,6 +33,10 @@ module.exports = {
         .isLength({ min: 8 })
         .withMessage("La contraseña debe tener 8 caracteres como minimo"),
 
+        body('user_img')
+        .custom((value,{req}) => req.file) //Si no existe req.file la verificacion no va a pasar
+        .withMessage("La imagen no es valida o no se ha elegido ninguna"),
+
         body('passwordCheck').
         custom((value,{req}) => {
             if (value !== req.body.password) {

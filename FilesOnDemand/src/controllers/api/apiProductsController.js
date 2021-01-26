@@ -42,5 +42,95 @@ module.exports = {
     }catch(error){
       res.send(error);
     }
+  },
+  index: async (req, res, next) => {
+    try{
+        let products = await db.Product.findAll();
+
+        if (products.length > 0){
+            let respuesta = {
+                metadata:[{
+                    status: 200,
+                    cantidad: products.length
+                }],
+
+                resultados: products
+
+            }
+            res.json(respuesta);
+        }          
+
+
+     
+
+    }catch(error){
+        res.send(error);
+    }
+    
+  },
+  last: async (req,res)=>{              
+    try{
+        let Product = await db.Product.findOne({order: [ [ 'createdAt', 'DESC' ]]});
+
+        if(Product === null){
+            console.log('not found')
+
+        
+        }else{
+            let respuesta = {
+                metadata:[{
+                    status: 200,
+                                            
+                }],
+                resultados: [Product]        
+                                       
+            }
+        
+        res.json( respuesta );
+        }
+    
+        
+    }catch(error){
+        res.send(error);
+    }
+
+    },
+    categories: async (req, res, next) => {
+      try{
+          let audio = await db.Product.findAll({where: {category_id: '2'}});
+          let  imagen = await db.Product.findAll({where: {category_id: '1'}});
+          let  escritura = await db.Product.findAll({where: {category_id: '3'}});
+          let  diseño = await db.Product.findAll({where: {category_id: '4'}});
+
+
+          if(audio === null){
+              console.log('not found')
+
+          
+          }else{
+              let respuesta = {
+                  metadata:[{
+                      status: 200,},                            
+                                              
+                  ],
+                  indice: [
+                      {categoria: "Audio",  cantidad: audio.length},
+                      {categoria: "Imagen", cantidad: imagen.length},
+                      {categoria: "Escritura", cantidad: escritura.length},
+                      {categoria: "Diseño", cantidad: diseño.length},
+
+                  ],
+
+                  resultados: {audio, imagen, escritura, diseño}       
+                                         
+              }
+
+          res.json(respuesta);
+          }
+      }catch(error){
+          res.send(error);
+      }
   }
+
+
 }

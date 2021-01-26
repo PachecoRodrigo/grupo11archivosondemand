@@ -10,10 +10,10 @@ module.exports = {
       let users = await sequelize.query(sqlAll);
       if(users[0].length>0){
         let respuesta = {
-          metadata:{
+          metadata:[{
             status:200,
             cantidad:users[0].length,
-          },
+          }],
           resultados:users[0]
         }
         res.json (respuesta);

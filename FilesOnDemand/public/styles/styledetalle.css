@@ -9,9 +9,13 @@ body{
     margin:0;
 }
 
+
 .body-description{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.h1product{
+    margin: 5px;
 }
 
 .product-wrapper{
@@ -20,7 +24,7 @@ body{
 }    
 
 .product-title {
-    margin: 20px;
+    margin: 10px;
     font-size: 40px;
     text-align: center;
 }

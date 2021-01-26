@@ -6,6 +6,10 @@
     <!-- link css -->
     <link rel="stylesheet" href="\styles\styleindex.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link js -->
+    <script src= "/js/main.js" defer></script>
+
+
 
 <body>
     <div class="container">
@@ -14,18 +18,20 @@
         <!--fin del header -->
 
     <section class="busquedas">
-        <form action="/products/search" method="POST" class="busqueda">
+        <form id= search action="/products/search" method="POST" class="busqueda">
             <input  class= "busqueda" type="text" name="products" placeholder="¿Que estas buscando?">
-            
-            <select name="categories" id="categories" >
-                <option selected value="title" disabled> Tipo de Archivo </option>
+            <div>
+                <select name="categories" id="categories" class="" onchange="setSucces()" >
+                    <option selected value="title" disabled> Tipo de Archivo </option>
 
-                <% categories.forEach(category => { %>
+                 <% categories.forEach(category => { %>
                     <option value="<%= category.id %>" ><%= category.name %></option> 
-                <% }) %>
-
-            </select>                         
+                    <% }) %>
+                </select>    
+                
+            </div>                     
             <button type="submit" class= "submit" ><i>Buscar</i></button>
+            <small id= "user-mesage"></small>
             
             </form>
        
