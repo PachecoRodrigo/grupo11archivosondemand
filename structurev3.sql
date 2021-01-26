@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `filesondemand` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `filesondemand`;
 -- MySQL dump 10.13  Distrib 8.0.21, for macos10.15 (x86_64)
 --
 -- Host: localhost    Database: filesondemand
