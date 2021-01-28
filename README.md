@@ -1,20 +1,63 @@
-# grupo11archivosondemand
+# Files On Demand
+Facilitamos el intercambio de arte digital
 
-https://trello.com/b/mGbEIEXw/archivos-on-demand
-
-
-
-Una breve descripción de la oferta de productos y / o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio. 
-FilesOnDemand (FOD) Es un sitio para el intercambio de archivos creativos, donde  los creadores digitales pueden vender su arte por una pequeña suma a quienes necesiten contenidos digitales para complementar sus actividades. 
-Ya seas un youtuber en busca de una buena canción para tu video,  o algún sitio de turismo que necesita buenas imágenes fotográficas, incluso si fabricas remeras estampadas y queres diseños a buen precio o tenes una impresora 3D y buscas diseños imprimibles, en FOD vas a conseguir todo eso por un precio justo y con las licencias de uso correspondientes.
-Dibujantes, diseñadores, músicos, fotógrafos, escritores, todos se podrán conectar con el amplio público que consume su arte, ya sea con fines comerciales o recreativos, todos pueden necesitar de un archivo de calidad. 
-
-Una breve descripción de los integrantes del equipo.
-
-Patricio Vázquez
-El más viejo del grupo, con 37 años, me dedico al diseño 3D, habiendo estudiado la carrera de Director de Cine y TV y experimentado con el diseño industrial, hoy busco la forma de mezclar todos esos conocimientos con el diseño WEB.
-
-Ignacio Tornati
-Me dicen Nacho! Tengo 20 años y estudio Ingeniería Informática. Cada día me gusta mas programar! Busco adentrarme en el mundo del desarrollo web ya que me parece que tiene muy buena salida laboral!
+## Comencemos 🚀
+_Estas instrucciones te permitirán obtener una copia del proyecto, para su funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 
+* Puedes acceder al proyecto con el siguente link
+  * https://github.com/PachecoRodrigo/grupo11archivosondemand.git
+### Pre-requisitos 📋
+
+Estos son los paquetes necesarios para el funcionamiento del proyecto
+  -  "bcrypt": "^5.0.0",
+  -  "cookie-parser": "^1.4.5",
+  -  "debug": "~2.6.9",
+  -  "ejs": "~2.6.1",
+  -  "express": "~4.16.1",
+  -  "express-session": "^1.17.1",
+  -  "express-validator": "^6.6.1",
+  -  "http-errors": "~1.6.3",
+  -  "method-override": "^3.0.0",
+  -  "morgan": "~1.9.1",
+  -  "multer": "^1.4.2",
+  -  "mysql2": "^2.2.5",
+  -  "sequelize": "^6.3.5",
+  -  "sequelize-cli": "^6.2.0"
+
+### Ademas requerimos los softwares:
+Un editor de codigo:
+  - Visual Studio Code _Fue utilizato para este proyecto_
+
+Un host local como (solo uno):
+  - MAMP
+  - XAMPP
+
+Una base de datos en MySQL
+  - MySQL WorkBench _Para ejecutar la base de datos que esta en la carpeta dataBase_
+### Instalación 🔧
+1. clonar el repositorio https://github.com/PachecoRodrigo/dhmovies.git
+2. Accede a la consola o terminal de visual studio tambien con el atajo Ctrl + ñ
+3. Acceder al proyecto y ejecutar el comando para instalar las dependencias necesarias. _Se instalaran todas las depencencias necesarias para el funcionamiento del proyecto_
+```
+npm install
+```
+4. Inicializa el host "El modulo de MySql".
+5. Abrir MySQL WorkBench y acceder al Local instance mysql _El proyecto trabaja con Usuario: root y password: null_
+6. En el menu de opciones seleccionar File/Run SQL Script...
+7. En la ventana buscar el archivo DB Estructura
+8. Repetir paso 6 y buscar el archivo DB Datos
+9. Volvemos a visual y en la tarminal. Inicializamos el proyecto con el comando 
+```
+npm start
+```
+10. Desde tu navegador accede al proyecto mediante el link _Para la pagina web_
+```
+localhost:5000
+```
+_En caso de no funcionar revisar en la carpeta "src/bin/www.js" El puerto deberia de ser el mismo que en el link_
+11. Desde tu navegador accede al DashBoard mediante el link _Para el DashBoard_
+```
+localhost:3000
+```
+12. A disfrutar la pagina
